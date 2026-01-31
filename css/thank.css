@@ -1,0 +1,39 @@
+main{
+    height: 100vh;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankcard{
+    text-align: center;
+    max-width: 500px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.thankcard p{
+    /* padding-bottom: 60px; */
+    font-style: italic;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+
+}
+.thankcard .btnContainer{
+    margin: 20px 0;
+}
+.thankcard h1{
+    font-size: 30px;
+    font-weight: 700;
+    /* padding-bottom: 20px; */
+}
+
+
