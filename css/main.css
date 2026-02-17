@@ -181,6 +181,12 @@ nav .btn {
   border-radius: 8px;
 }
 
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 nav .navItem {
   width: calc(100%/3);
   height: 3.5rem;
