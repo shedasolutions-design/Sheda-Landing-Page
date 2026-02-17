@@ -31,18 +31,40 @@ menuToggle.addEventListener('click', () => {
   }
 );
 
+// Popup functionality for iOS "Coming Soon"
+const iosBtn = document.querySelector('.ios-download-btn');
+const iosPopup = document.getElementById('iosComingSoon');
 
+if (iosBtn && iosPopup) {
+  iosBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    iosPopup.classList.add('show');
+    
+    // Hide popup after 2 seconds
+    setTimeout(() => {
+      iosPopup.classList.remove('show');
+    }, 2000);
+  });
+}
 
+// Tab switching for How It Works section (Buyer vs Seller)
+const tabs = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
 
-// const currentPath = window.location.pathname; 
-// const navLinks = document.querySelectorAll('nav .menu li a');
-
-// navLinks.forEach(link => {
-//   if (link.getAttribute('href') === currentPath) {
-//     link.classList.add('active');
-//   } else {
-//     link.classList.remove('active');
-//   }
-// });
-
-// toggle-close-x-svgrepo-com.svg
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs and content
+    tabs.forEach(t => t.classList.remove('active'));
+    tabContents.forEach(c => c.classList.remove('active'));
+    
+    // Add active class to clicked tab
+    tab.classList.add('active');
+    
+    // Show corresponding content
+    const targetId = tab.dataset.tab;
+    const targetContent = document.getElementById(targetId);
+    if (targetContent) {
+      targetContent.classList.add('active');
+    }
+  });
+});

@@ -1,92 +1,17 @@
 main .how-it-works {
   width: 90%;
   margin: 0 auto;
-}
-
-/* #waitlistWrapper input { */
-#myForm input {
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  box-sizing: border-box;
-  border: 1px solid ;
-  border-radius: 30px;
-  padding: 10px;
-  
-  
-
-  font-family: Manrope;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 30px;
-  color: #c1272d;
-}
-
-#myForm input::placeholder {
-  font-family: Inter;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 30px;
-  color: #000000a6;
-}
-
-.waitlist .input-container {
-  position: relative;
-  width: 50%;
-  height: 60px;
-  margin: 0 auto;
-  border-radius: 30px;
-
-  /* background-color: transparent; */
-}
-
-#myForm button {
-  font-family: Manrope;
-  background-color: #c1272d;
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  height: 90%;
-  padding: 0 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 30px;
-  border: 2px solid #ffffff;
-
-  font-family: Manrope;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24.59px;
-  color: #ffffff;
-}
-
-#landlordBtn {
-  background-color: #c1272d;
-  color: white;
-  max-width: 266px;
-  padding: 16px 28px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-
-  font-family: Manrope;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  margin-top: 32px;
-}
-
-#landlordBtn:hover {
-  background-color: #a61e34;
+  padding-top: 80px; /* Account for fixed header */
 }
 
 .hero {
   max-width: 1200px;
   margin: 32px auto 0;
-  background-image: url(/images/hero-bg.png);
+  background: linear-gradient(to bottom, #ffffff, #f4cece);
   background-position: center;
   background-size: cover;
+  position: relative;
+  padding-bottom: 0;
 }
 
 main .frame48095733 {
@@ -96,41 +21,172 @@ main .frame48095733 {
 }
 
 .frame48095733 h1 {
-  /* font-size: 60px;
-  font-weight: 800;
-  line-height: 70px; */
-
   font-family: Inter;
   font-weight: 800;
-  font-size: 60px;
-  line-height: 70px;
-  letter-spacing: 0%;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .frame48095733 p {
   font-family: Inter;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 25px;
-  color: rgba(0, 0, 0, 0.65);
-  /* margin-bottom: 32px; */
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.7);
+  max-width: 768px;
+  margin: 0 auto 32px;
 }
+
 .frame48095733 #image-container {
   margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hero-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-btn img {
+  width: auto;
+  height: 48px;
+  display: block;
+}
+
+.hero-popup {
+  bottom: calc(100% + 8px);
 }
 
 .heroImageContainer {
-  width: 60%;
-  max-width: 587px;
+  width: 100%;
+  max-width: 1000px;
   text-align: center;
-  margin: 0 auto;
+  margin: 48px auto 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.heroImageContainer img {
+.heroImageContainer .hero-phone {
   width: 100%;
-  max-width: 522px;
-  margin-top: 24px;
+  max-width: 600px;
+  height: auto;
+  margin: 0;
+}
+
+/* Verified Listings Badge */
+.verified-badge {
+  position: absolute;
+  left: 20px;
+  top: 40%;
+  z-index: 10;
+}
+
+.verified-badge img {
+  width: 280px;
+  height: auto;
+}
+
+/* Property Owner Card */
+.property-owner-card {
+  position: absolute;
+  right: 20px;
+  bottom: 80px;
+  z-index: 10;
+  background: white;
+  border-radius: 16px;
+  padding: 16px 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 280px;
+}
+
+.owner-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.owner-info {
+  flex: 1;
+}
+
+.owner-name {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.owner-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-text {
+  font-family: Inter;
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.owner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-menu {
+  border: 1px solid #d1d5db;
+  background: white;
+}
+
+.action-menu:hover {
+  background: #f3f4f6;
+}
+
+.action-primary {
+  background: #C62828;
+  border: none;
+}
+
+.action-primary:hover {
+  background: #B71C1C;
 }
 
 .containerC {
@@ -240,16 +296,42 @@ main .features-section {
 
   .frame48095733 h1 {
     font-family: Inter;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 800;
-    line-height: 40px;
+    line-height: 1.2;
+    margin-bottom: 16px;
   }
+  
   .frame48095733 p {
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 1.5;
   }
+  
+  .frame48095733 #image-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .hero-btn img {
+    height: 40px;
+  }
+  
+  /* Hide decorative elements on mobile */
+  .verified-badge,
+  .property-owner-card {
+    display: none;
+  }
+  
+  .heroImageContainer {
+    margin-top: 32px;
+  }
+  
+  .heroImageContainer .hero-phone {
+    max-width: 350px;
+  }
+  
   #headbadge {
     font-size: 16px;
     font-weight: 500;
@@ -257,19 +339,15 @@ main .features-section {
     text-align: center;
     margin: 0 auto;
   }
+  
   .containerA h2 {
-    /* font-size: 30px;
-      font-weight: 600;
-      line-height: 38px;
-      letter-spacing: -0.02em; */
     text-align: center;
   }
+  
   .containerA p {
-    /* font-size: 18px;
-      font-weight: 400;
-      line-height: 28px; */
     text-align: center;
   }
+  
   .containerC h3 {
     font-family: Inter;
     font-size: 18px;
@@ -277,10 +355,37 @@ main .features-section {
     line-height: 28px;
     text-align: center;
   }
+  
   .containerC p {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .verified-badge {
+    left: 20px;
+  }
+  
+  .verified-badge img {
+    height: 60px;
+  }
+  
+  .property-owner-card {
+    right: 20px;
+    bottom: 40px;
+    min-width: 240px;
+    padding: 12px 16px;
+  }
+  
+  .frame48095733 h1 {
+    font-size: 48px;
+  }
+  
+  .heroImageContainer .hero-phone {
+    max-width: 500px;
   }
 }

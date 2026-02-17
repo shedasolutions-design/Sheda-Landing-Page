@@ -1,0 +1,120 @@
+/* Tab Navigation Styles */
+.tab-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #6b7280;
+  transition: stroke 0.3s ease;
+}
+
+.tab-button:hover {
+  border-color: #c1272d;
+  color: #c1272d;
+  background: #fff5f5;
+}
+
+.tab-button:hover svg {
+  stroke: #c1272d;
+}
+
+.tab-button.active {
+  background: #c1272d;
+  border-color: #c1272d;
+  color: white;
+}
+
+.tab-button.active svg {
+  stroke: white;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none !important; /* Hide by default */
+  width: 100%;
+}
+
+.tab-content.active {
+  display: block !important; /* Show when active */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Tab Styles */
+@media (max-width: 600px) {
+  .tab-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .tab-button {
+    min-width: 100%;
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  
+  .tab-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Feature List Styling */
+.text-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0 0;
+}
+
+.text-container ul li {
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4b5563;
+  padding-left: 32px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.text-container ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #c1272d;
+  font-weight: bold;
+  font-size: 18px;
+}
