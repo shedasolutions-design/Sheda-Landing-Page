@@ -572,7 +572,7 @@ p {
 
 @media (max-width: 480px) {
   .cta-banner-inner {
-    padding: 36px 16px;
+    padding: 36px 16px 0px 16px;
   }
 
   .cta-banner-text h2 {
