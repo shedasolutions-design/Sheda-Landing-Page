@@ -1,0 +1,219 @@
+/* ============================================
+   Why Choose Sheda Solutions Section
+   ============================================ */
+
+.why-choose-section {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 96px 20px;
+  text-align: center;
+}
+
+.why-choose-section .section-badge {
+  display: inline-block;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #c1272d;
+  padding: 4px 20px;
+  border-radius: 8px;
+  background: rgba(193, 39, 45, 0.04);
+}
+
+.why-choose-section .section-title {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  margin: 12px 0 48px;
+  color: #000;
+}
+
+/* --- Benefits Grid (3-column layout) --- */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+/* --- Individual Benefit Card --- */
+.benefit-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Left column cards */
+.benefits-col-left,
+.benefits-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* --- Card Icon Container --- */
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(193, 39, 45, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.benefit-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Card Typography --- */
+.benefit-card .benefit-title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.benefit-card .benefit-desc {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+/* --- Center Phone Mockup --- */
+.benefits-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-center img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* ============================================
+   Additional Benefits (Pill Tags)
+   ============================================ */
+
+.additional-benefits {
+  text-align: center;
+}
+
+.additional-benefits .additional-title {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.benefits-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.benefit-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #c1272d;
+  padding: 10px 24px;
+  border: 1.5px solid rgba(193, 39, 45, 0.25);
+  border-radius: 100px;
+  background: rgba(193, 39, 45, 0.03);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+
+.benefit-tag:hover {
+  background: rgba(193, 39, 45, 0.08);
+  border-color: rgba(193, 39, 45, 0.4);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 900px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .benefits-col-left,
+  .benefits-col-right {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .benefits-center {
+    order: -1;
+  }
+
+  .benefits-center img {
+    max-width: 300px;
+  }
+
+  .why-choose-section .section-title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .additional-benefits .additional-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-section {
+    padding: 64px 16px;
+  }
+
+  .benefits-col-left,
+  .benefits-col-right {
+    flex-direction: column;
+  }
+
+  .benefit-card {
+    padding: 20px 18px;
+  }
+
+  .benefits-center img {
+    max-width: 260px;
+  }
+
+  .benefits-tags {
+    gap: 10px;
+  }
+
+  .benefit-tag {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
