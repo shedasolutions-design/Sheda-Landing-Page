@@ -1,7 +1,7 @@
 main .how-it-works {
   width: 90%;
   margin: 0 auto;
-  padding-top: 80px; /* Account for fixed header */
+  padding-top: 88px; /* Account for fixed 72px header + breathing room */
 }
 
 .hero {
