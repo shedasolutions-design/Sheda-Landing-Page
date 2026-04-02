@@ -10,11 +10,12 @@
     background-position: center;
     background-size: cover;
     text-align: center;
+    padding-top: 72px; /* clear the fixed nav bar */
 }
 
 .hero-content {
     max-width: 620px;
-    padding: 80px 20px 48px;
+    padding: 40px 20px 48px;  /* 72px on .hero + 40px here ≈ 112px from page top, matching home */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -324,8 +325,12 @@
    ============================================ */
 
 @media (max-width: 768px) {
+    .hero {
+        padding-top: 64px; /* mobile header is 64px, not 72px */
+    }
+
     .hero-content {
-        padding: 64px 16px 36px;
+        padding: 24px 16px 36px; /* 64px on .hero + 24px here = 88px total ≈ home page */
     }
 
     .hero-content h1 {

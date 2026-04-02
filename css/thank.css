@@ -1,5 +1,6 @@
 main{
-    height: 100vh;
+    min-height: calc(100vh - 72px); /* full viewport minus fixed header */
+    padding-top: 72px;              /* push content below the fixed nav */
     max-width: 1240px;
     margin: 0 auto;
     display: flex;
@@ -11,6 +12,13 @@ main{
     text-align: center;
     max-width: 500px;
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+    main {
+        min-height: calc(100vh - 64px); /* mobile header is 64px */
+        padding-top: 64px;
+    }
 }
 
 a{
