@@ -1,0 +1,270 @@
+/*
+ * The rebuilt home page.
+ *
+ * A separate stylesheet rather than edits to main2.css, because the other
+ * four pages are still laid out by that file and a change there would move
+ * them too. Everything here is scoped under .rb so nothing can leak out.
+ *
+ * The brand tokens are the existing ones, taken from the current site and
+ * from the app so the two read as one product: #c1272d, Inter, Manrope.
+ */
+
+.rb {
+  --red: #c1272d;
+  --red-dark: #a3171d;
+  --red-tint: #fdf4f4;
+  --ink: #0b0b0c;
+  --body: #4b5055;
+  --muted: #878c93;
+  --line: #e4e5e7;
+  --surface: #f7f7f8;
+  --positive: #0f7a46;
+  --positive-tint: #e8f4ed;
+
+  --gutter: clamp(20px, 5vw, 64px);
+  --max: 1160px;
+
+  color: var(--body);
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.rb * { box-sizing: border-box; }
+
+.rb section { padding-block: clamp(56px, 8vw, 104px); }
+.rb .wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.rb h1, .rb h2, .rb h3 {
+  font-family: "Manrope", "Inter", sans-serif;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 0;
+}
+.rb h1 { font-size: clamp(34px, 6vw, 60px); line-height: 1.05; }
+.rb h2 { font-size: clamp(27px, 4vw, 40px); line-height: 1.15; }
+.rb h3 { font-size: clamp(19px, 2.2vw, 22px); line-height: 1.3; }
+.rb p { margin: 0; }
+
+.rb .lede { font-size: clamp(17px, 2vw, 20px); line-height: 1.55; max-width: 62ch; }
+.rb .eyebrow {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+
+/* ---- buttons ---- */
+
+.rb .btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.rb .cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 15px 26px;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  transition: background-color .15s ease, border-color .15s ease, transform .1s ease;
+}
+.rb .cta:active { transform: translateY(1px); }
+.rb .cta-primary { background: var(--red); color: #fff; }
+.rb .cta-primary:hover { background: var(--red-dark); }
+.rb .cta-ghost { border-color: var(--line); color: var(--ink); background: #fff; }
+.rb .cta-ghost:hover { border-color: var(--ink); }
+
+/* A live product should say so, next to the button that proves it. */
+.rb .live {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--positive);
+  background: var(--positive-tint);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.rb .live::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--positive);
+}
+
+/* ---- hero ---- */
+
+.rb .hero {
+  padding-block: clamp(56px, 9vw, 110px);
+  background:
+    radial-gradient(900px 440px at 78% -5%, #fdf0f0 0%, rgba(253, 244, 244, 0) 62%),
+    #fff;
+  border-bottom: 1px solid var(--line);
+}
+.rb .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+.rb .hero p.lede { margin-top: 20px; }
+.rb .hero .btn-row { margin-top: 30px; }
+.rb .hero-note { margin-top: 16px; font-size: 14px; color: var(--muted); }
+.rb .hero-shot {
+  width: 100%;
+  max-width: 420px;
+  margin-inline: auto;
+  display: block;
+  filter: drop-shadow(0 26px 46px rgba(11, 11, 12, .14));
+}
+
+/* ---- panels and cards ---- */
+
+.rb .tinted { background: var(--surface); border-block: 1px solid var(--line); }
+.rb .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+.rb .card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px;
+}
+/* Four across at desktop. The default minimum wraps them 3 + 1, which
+   leaves the last one stranded on its own row looking like an oversight. */
+.rb .cards.four { grid-template-columns: repeat(auto-fit, minmax(212px, 1fr)); }
+
+.rb .card h3 { margin-bottom: 9px; }
+.rb .card p { font-size: 15.5px; }
+.rb .card .num {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--red);
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Two columns of plain prose, for the buyer and seller split. */
+.rb .split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: clamp(24px, 4vw, 52px);
+  margin-top: 44px;
+}
+.rb .split h3 { margin-bottom: 16px; }
+.rb .split ul { margin: 0; padding: 0; list-style: none; }
+.rb .split li {
+  position: relative;
+  padding-left: 27px;
+  margin-bottom: 13px;
+  font-size: 16px;
+}
+.rb .split li::before {
+  content: "";
+  position: absolute;
+  left: 3px; top: 10px;
+  width: 7px; height: 7px;
+  border-radius: 2px;
+  background: var(--red);
+}
+
+/* ---- the diagram ---- */
+
+.rb .diagram {
+  margin-top: 34px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: clamp(20px, 4vw, 34px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+.rb .node { text-align: center; padding: 18px 14px; border-radius: 11px; background: var(--surface); }
+.rb .node .tag {
+  font-family: "Manrope", sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.rb .node strong { display: block; color: var(--ink); font-size: 17px; margin-block: 7px 4px; }
+.rb .node span { font-size: 14px; color: var(--muted); }
+
+/* ---- quote ---- */
+
+.rb .pull {
+  border-left: 3px solid var(--red);
+  padding: 4px 0 4px 22px;
+  margin-top: 34px;
+  font-size: clamp(18px, 2.4vw, 22px);
+  line-height: 1.45;
+  color: var(--ink);
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  max-width: 58ch;
+}
+
+/* ---- roadmap ---- */
+
+.rb .road { margin-top: 40px; display: grid; gap: 14px; }
+.rb .stage {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 22px 24px;
+}
+.rb .pill {
+  font-family: "Manrope", sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 6px 11px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.rb .pill.done { background: var(--positive-tint); color: var(--positive); }
+.rb .pill.next { background: var(--red-tint); color: var(--red); }
+.rb .pill.later { background: var(--surface); color: var(--muted); }
+.rb .stage h3 { font-size: 18px; margin-bottom: 5px; }
+.rb .stage p { font-size: 15.5px; }
+
+/* ---- closing ---- */
+
+.rb .closing { background: var(--ink); color: #c9ccd0; text-align: center; }
+.rb .closing h2 { color: #fff; }
+.rb .closing p { margin-top: 16px; margin-inline: auto; }
+.rb .closing .btn-row { justify-content: center; margin-top: 30px; }
+.rb .closing .cta-ghost { background: transparent; border-color: #41464c; color: #fff; }
+.rb .closing .cta-ghost:hover { border-color: #fff; }
+.rb .store-row { display: flex; gap: 12px; justify-content: center; margin-top: 26px; flex-wrap: wrap; }
+.rb .store-row img { height: 44px; width: auto; opacity: .55; }
+.rb .store-note { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .rb .hero-grid { grid-template-columns: 1fr; }
+  .rb .hero-shot { max-width: 300px; }
+}
