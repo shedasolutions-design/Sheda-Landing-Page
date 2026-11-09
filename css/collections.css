@@ -1,0 +1,128 @@
+/*
+ * Two additions to the home page, in the existing visual language.
+ *
+ * A separate file so main2.css keeps laying out the other four pages
+ * unchanged. Colours, radii and type are the ones already in use.
+ */
+
+/* The roadmap cards had no way to say a stage was finished, so every one
+   of them read as still ahead. */
+.stage-status {
+  display: inline-block;
+  font-family: "Manrope", sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 5px 11px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  background: #e8f4ed;
+  color: #0f7a46;
+}
+
+/* nav a { color: #000 } in commonstyle outranks .btn on specificity, which
+   left the red button at the bottom of the mobile menu with black text. */
+nav .menu .mobile-cta-item .btn {
+  color: #fff;
+}
+
+/* The FAQ chevron turns rather than swapping to a second image. One less
+   request, and it animates. */
+.toggle-answer {
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.2s ease;
+}
+
+.toggle-answer.expanded {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle-answer { transition: none; }
+}
+
+/* ---- fractional ownership ---- */
+
+.collections-section {
+  padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 64px);
+  background: #f9fafb;
+  border-block: 1px solid #e4e5e7;
+}
+.collections-inner {
+  max-width: 1160px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+.collections-copy h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #1f2937;
+  margin: 10px 0 16px;
+  text-wrap: balance;
+}
+.collections-copy p { color: #4b5055; line-height: 1.6; margin: 0 0 14px; }
+.collections-copy .emphasis { color: #1f2937; font-weight: 600; }
+
+/* The three parts of the mechanism, which is the thing most people have
+   not seen before and the thing worth showing rather than describing. */
+.chain-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 26px;
+}
+.chain-node {
+  background: #fff;
+  border: 1px solid #e4e5e7;
+  border-radius: 12px;
+  padding: 16px 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.chain-node:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(11, 11, 12, .07); }
+.chain-node .std {
+  font-family: "Manrope", sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: #c1272d;
+}
+.chain-node strong { display: block; color: #1f2937; font-size: 16px; margin: 6px 0 4px; }
+.chain-node span { font-size: 13.5px; color: #6b7280; line-height: 1.45; }
+
+.collections-art { text-align: center; }
+.collections-art img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+}
+
+/* Reveal on scroll, matching the easing already used across the site.
+   The hidden state is scoped to .js-reveal, which the script adds to <html>
+   before it starts observing. If the script never runs the content is
+   simply visible, rather than permanently invisible behind an opacity of
+   zero that nothing is left to undo. */
+html.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+html.js-reveal .reveal.shown { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-reveal .reveal { opacity: 1; transform: none; transition: none; }
+  .chain-node { transition: none; }
+}
+
+@media (max-width: 860px) {
+  .collections-inner { grid-template-columns: 1fr; }
+  .collections-art { order: -1; }
+}
