@@ -218,7 +218,10 @@ tabs.forEach((tab) => {
 (function () {
   const bar = document.querySelector(".scroll-progress span");
   const jumps = Array.from(document.querySelectorAll('nav .menu a.jump'));
-  const homeLink = document.querySelector('nav .menu a[href="/index.html"]');
+  // Whichever link the markup already marks as the current page. Matching
+  // on the href instead would depend on how the site happens to be served,
+  // and would quietly stop finding it anywhere the page is not at /.
+  const pageLink = document.querySelector("nav .menu a.active:not(.jump)");
 
   // Each link's target, in document order, skipping any anchor whose
   // section is not on this page.
@@ -250,12 +253,12 @@ tabs.forEach((tab) => {
       if (m.el.offsetTop <= line) current = m;
     }
 
-    // Past the bottom of the last section there is nothing to highlight,
-    // and at the top of the page Home is the honest answer.
+    // Above the first section there is no section being read, so the
+    // page's own link in the nav is the honest answer.
     for (const m of marks) {
       m.link.classList.toggle("active", m === current);
     }
-    if (homeLink) homeLink.classList.toggle("active", current === null);
+    if (pageLink) pageLink.classList.toggle("active", current === null);
   }
 
   function onScroll() {
