@@ -158,3 +158,33 @@ tabs.forEach((tab) => {
     if (target) target.classList.add("active");
   });
 });
+// ==============================================
+// Reveal on scroll
+// ==============================================
+// Anything marked .reveal fades up once, the first time it comes into
+// view. Guarded on IntersectionObserver so an older browser simply shows
+// the content, and the stylesheet already turns the motion off for anyone
+// who has asked for less of it.
+(function () {
+  const items = document.querySelectorAll(".reveal");
+  if (!items.length) return;
+
+  if (!("IntersectionObserver" in window)) return;
+
+  // Only now does the hidden state apply. Setting it in CSS alone would
+  // leave the content invisible on any page where this script failed.
+  document.documentElement.classList.add("js-reveal");
+
+  const seen = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("shown");
+        obs.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.1 }
+  );
+
+  items.forEach((el) => seen.observe(el));
+})();
