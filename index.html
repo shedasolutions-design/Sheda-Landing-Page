@@ -7,12 +7,12 @@
     <link rel="preload" href="/font/Inter/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/font/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     <meta name="description"
-        content="Sheda Solutions - Revolutionizing real estate operations through blockchain technology.">
-    <meta name="keywords" content="Sheda Solutions, real estate, blockchain, property management, smart contracts">
+        content="Rent, buy and own property direct, with escrow a smart contract releases instead of an agent. Own a whole flat, or a fraction of one, and earn its rent.">
+    <meta name="keywords" content="Sheda Solutions, real estate, blockchain, fractional ownership, property escrow, smart contracts, NEAR">
     <meta name="author" content="Sheda Solutions">
     <link rel="icon" href="/images/shedddddddddd-1.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/shedddddddddd-1.png">
-    <title>Sheda Solutions | real estate</title>
+    <title>Sheda Solutions | property, direct</title>
     <link rel="stylesheet" href="/css/commonstyle.css">
     <link rel="stylesheet" href="/css/main2.css">
     <link rel="stylesheet" href="/css/forms.css">
@@ -20,11 +20,13 @@
     <link rel="stylesheet" href="/css/roadmap.css">
     <link rel="stylesheet" href="/css/why-choose.css">
     <link rel="stylesheet" href="/css/collections.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 
 <body>
 
     <header>
+        <div class="scroll-progress" aria-hidden="true"><span></span></div>
         <nav>
 
             <div class="navWrapper">
@@ -42,8 +44,11 @@
                 <!-- <div class="navItem"> -->
                 <ul class="menu">
                     <li><a class="active" href="/index.html">Home</a></li>
+                    <li><a class="jump" href="#how-it-works">How it works</a></li>
+                    <li><a class="jump" href="#collections">Collections</a></li>
+                    <li><a class="jump" href="#roadmap">Roadmap</a></li>
                     <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                     <li><a href="https://sheda-solutions.gitbook.io/sheda-solutions" target="_blank">Docs</a></li>
                 </ul>
                 <!-- </div> -->
@@ -64,9 +69,9 @@
             <div class="hero">
                 <!-- <div class="grid-background"></div> -->
                 <div class="frame48095733">
-                    <h1>Revolutionizing Real Estate with Blockchain Technologies</h1>
-                    <p>Making real estate operations affable, available, affordable, and secure through blockchain for
-                        buyers, sellers, and everyone in between.</p>
+                    <h1>Buy, rent and own property direct. The contract holds the money.</h1>
+                    <p>No agent in the middle, and no deposit sitting with someone you hope will return it.
+                        Own a whole flat, or a fraction of one.</p>
                     <div id="image-container">
                         <a href="https://sheda-solution-mobile--sheda-tt.expo.app" target="_blank" rel="noopener" class="hero-btn">
                             <img src="/images/svg/get-app-button.svg" alt="Open the app">
@@ -118,22 +123,34 @@
 
             </div>
 
-            <section class="features-section">
-                <div id="features-cont1">
-                    <!-- <h3 id="headbadge">Features</h3> -->
-                    <h2>Welcome to advanced real estate</h2>
-                    <p>Effortlessly transforming the real estate operation landscape with revolutionary features </p>
-                </div>
+            <section class="proof-strip" aria-label="What the app gives you">
+                <ul>
+                    <li>
+                        <strong>You talk to the owner</strong>
+                        <span>Inspections booked with whoever holds the keys.</span>
+                    </li>
+                    <li>
+                        <strong>Escrow you can read</strong>
+                        <span>A contract releases it. Not a person, not us.</span>
+                    </li>
+                    <li>
+                        <strong>The wallet is already inside</strong>
+                        <span>No extension, no seed phrase.</span>
+                    </li>
+                    <li>
+                        <strong>14 currencies</strong>
+                        <span>Priced where you live, settled in USDC.</span>
+                    </li>
+                </ul>
             </section>
 
-            <div class="containerA">
+            <div class="containerA" id="how-it-works">
 
 
                 <div class="text-container">
                     <h3 id="headbadge">How it works</h3>
-                    <h2>Your journey starts here</h2>
-                    <p>Whether you're searching for your dream property or listing one, Sheda Solutions makes the
-                        process seamless and secure with blockchain technology.</p>
+                    <h2>Three steps, either way round</h2>
+                    <p>Pick the side you are on.</p>
 
                     <!-- Tab Navigation -->
                     <div class="tab-container">
@@ -160,27 +177,24 @@
                     <img src="/images/iphone12 with backg.png" alt="iphone 12">
                 </div>
             </div>
-            </div>
 
             <!-- Buyer Journey -->
             <div id="buyer-content" class="tab-content active">
                 <div class="containerC">
                     <div id="container-card">
                         <div class="card-number">1</div>
-                        <h3>Search for properties</h3>
-                        <p>Browse through verified listings and filter by your preferences to find properties that match
-                            your needs</p>
+                        <h3>Find it</h3>
+                        <p>Verified listings, filtered by what matters to you.</p>
                     </div>
                     <div id="container-card">
                         <div class="card-number">2</div>
-                        <h3>Book an inspection</h3>
-                        <p>Schedule viewings with property owners directly and inspect properties at your convenience
-                        </p>
+                        <h3>See it</h3>
+                        <p>Book the viewing with the owner, not an agent.</p>
                     </div>
                     <div id="container-card">
                         <div class="card-number">3</div>
-                        <h3>Sign and secure</h3>
-                        <p>Complete the deal with blockchain-secured contracts and make payments safely</p>
+                        <h3>Sign it</h3>
+                        <p>Agree terms, pay into escrow, and get the documents on chain.</p>
                     </div>
                 </div>
             </div>
@@ -190,19 +204,18 @@
                 <div class="containerC">
                     <div id="container-card">
                         <div class="card-number">1</div>
-                        <h3>List your property</h3>
-                        <p>Create detailed listings with photos, pricing, and property details to attract potential
-                            buyers</p>
+                        <h3>List it</h3>
+                        <p>Photos, a price, and an NFT you own.</p>
                     </div>
                     <div id="container-card">
                         <div class="card-number">2</div>
-                        <h3>Connect with buyers</h3>
-                        <p>Receive and review offers from verified buyers, schedule inspections, and negotiate terms</p>
+                        <h3>Choose who</h3>
+                        <p>Review offers from verified buyers, and negotiate here.</p>
                     </div>
                     <div id="container-card">
                         <div class="card-number">3</div>
-                        <h3>Close the deal</h3>
-                        <p>Sign contracts and receive payments securely through our blockchain-powered platform</p>
+                        <h3>Get paid</h3>
+                        <p>Release the documents and the contract releases your money.</p>
                     </div>
                 </div>
             </div>
@@ -215,37 +228,34 @@
             <div class="collections-inner">
                 <div class="collections-copy reveal">
                     <h3 id="headbadge">Sheda Collections</h3>
-                    <h2>Own part of one specific flat, and earn its rent</h2>
+                    <h2>Own part of one flat, and earn its rent</h2>
                     <p>
-                        Property is the asset most people would choose and the one most are priced out of. The usual
-                        answer is a fund: you own a slice of a pool, you do not know which building, and you trust
-                        someone to tell you what it earned.
-                    </p>
-                    <p>
-                        Collections does the opposite. You buy shares in <span class="emphasis">one specific
-                        flat</span>, often before it is built. The rent it earns is divided among the people holding
-                        its shares, in proportion, on chain. Nobody reports the figure to you, because nobody has to.
+                        A fund gives you a slice of a pool and a figure someone reports to you. Collections gives
+                        you shares in <span class="emphasis">one specific flat</span>, and its rent, split on chain.
                     </p>
 
                     <div class="chain-row">
                         <div class="chain-node">
                             <span class="std">NEP-171 NFT</span>
                             <strong>The flat</strong>
-                            <span>A specific address, tenant and rent. It cannot be divided without destroying what
-                                makes it an asset.</span>
+                            <span>One address, one tenant, one rent.</span>
                         </div>
                         <div class="chain-node">
-                            <span class="std">Owns it</span>
+                            <span class="std">Holds it</span>
                             <strong>The vault</strong>
-                            <span>An account holds the NFT, so the vault is the landlord and the marketplace needs no
-                                change.</span>
+                            <span>An account owns the NFT, so the vault is the landlord.</span>
                         </div>
                         <div class="chain-node">
                             <span class="std">NEP-141 token</span>
                             <strong>The shares</strong>
-                            <span>Identical claims that divide, add together and sell in part. A tenth of the rent is
-                                a tenth of the rent.</span>
+                            <span>Identical claims that divide and sell in part.</span>
                         </div>
+                    </div>
+
+                    <div class="collections-cta">
+                        <a class="btn" href="https://sheda-solution-mobile--sheda-tt.expo.app" target="_blank"
+                            rel="noopener">Browse open raises</a>
+                        <span class="cta-note">NEAR testnet, test funds, not yet audited.</span>
                     </div>
                 </div>
 
@@ -263,7 +273,7 @@
                 <h2>What is built, and what is next</h2>
             </div>
 
-            <div class="roadmap-timeline">
+            <div class="roadmap-timeline reveal">
                 <!-- Timeline Line -->
                 <div class="timeline-line"></div>
 
@@ -273,38 +283,41 @@
                     <div class="roadmap-card">
                         <div class="timeline-connector"></div>
                         <div class="milestone-badge">1</div>
+                        <img class="stage-art" src="/images/svg/market-place.svg" alt="" loading="lazy" decoding="async">
                         <span class="stage-status shipped">Live</span>
-                        <h3>Marketplace Launch</h3>
-                        <p>Property rentals and sales directly between landlords/sellers and tenants/buyers, secured
-                            with blockchain smart contracts.</p>
+                        <h3>Marketplace</h3>
+                        <p>Rent, buy and sell direct. The contract holds the money.</p>
                     </div>
 
                     <!-- Card 2 -->
                     <div class="roadmap-card">
                         <div class="timeline-connector"></div>
                         <div class="milestone-badge">2</div>
-                        <span class="stage-status shipped">On testnet</span>
-                        <h3>Fractional Ownership &amp; Yield Investments</h3>
-                        <p>Affordable entry into premium properties, NFT-backed ownership receipts, and transparent
-                            yield distribution. Built and running on NEAR testnet, not yet audited.</p>
+                        <img class="stage-art" src="/images/svg/fractional-ownership.svg" alt="" loading="lazy" decoding="async">
+                        <span class="stage-status testnet">On testnet</span>
+                        <h3>Fractional ownership</h3>
+                        <p>Shares in one flat, and its rent. Built, running, not yet audited.
+                            <a class="card-link" href="#collections">How it works</a></p>
                     </div>
 
                     <!-- Card 3 -->
                     <div class="roadmap-card">
                         <div class="timeline-connector"></div>
                         <div class="milestone-badge">3</div>
-                        <h3>Real Estate Services Integration</h3>
-                        <p>Property management, legal, insurance, and technical services fully embedded into the
-                            platform ecosystem.</p>
+                        <img class="stage-art" src="/images/svg/real-estate.svg" alt="" loading="lazy" decoding="async">
+                        <span class="stage-status planned">Next</span>
+                        <h3>Real estate services</h3>
+                        <p>Management, legal, insurance and maintenance, booked inside the app.</p>
                     </div>
 
                     <!-- Card 4 -->
                     <div class="roadmap-card">
                         <div class="timeline-connector"></div>
                         <div class="milestone-badge">4</div>
-                        <h3>On-Chain Property Importation</h3>
-                        <p>Tokenize and manage existing property ownership on-chain for income generation and utility
-                            access.</p>
+                        <img class="stage-art" src="/images/svg/on-chain.svg" alt="" loading="lazy" decoding="async">
+                        <span class="stage-status planned">Planned</span>
+                        <h3>Property you already own</h3>
+                        <p>Bring a title you already hold on chain.</p>
                     </div>
                 </div>
             </div>
@@ -330,7 +343,7 @@
                             </svg>
                         </div>
                         <h3 class="benefit-title">Available</h3>
-                        <p class="benefit-desc">Access your real estate tools and documents anytime, anywhere.</p>
+                        <p class="benefit-desc">Your documents and deals, open in any browser.</p>
                     </div>
 
                     <!-- Affordable Card -->
@@ -344,7 +357,7 @@
                             </svg>
                         </div>
                         <h3 class="benefit-title">Affordable</h3>
-                        <p class="benefit-desc">Lower costs through efficient, blockchain-powered processes.</p>
+                        <p class="benefit-desc">No agent commission. Buy a slice of a flat.</p>
                     </div>
                 </div>
 
@@ -367,7 +380,7 @@
                             </svg>
                         </div>
                         <h3 class="benefit-title">Affable</h3>
-                        <p class="benefit-desc">Simple, user-friendly interactions for everyone.</p>
+                        <p class="benefit-desc">Works like any other app.</p>
                     </div>
 
                     <!-- Secure Card -->
@@ -382,8 +395,7 @@
                             </svg>
                         </div>
                         <h3 class="benefit-title">Secure</h3>
-                        <p class="benefit-desc">Every transaction protected with smart contracts and on-chain
-                            verification.</p>
+                        <p class="benefit-desc">Escrow and title held by a contract, not by us.</p>
                     </div>
                 </div>
             </div>
@@ -392,18 +404,19 @@
             <div class="additional-benefits">
                 <h2 class="additional-title">Additional Benefits</h2>
                 <div class="benefits-tags">
-                    <span class="benefit-tag">Frictionless Experience</span>
-                    <span class="benefit-tag">Transparent Yields</span>
-                    <span class="benefit-tag">Interconnected Ecosystem</span>
-                    <span class="benefit-tag">Zero-Knowledge Privacy</span>
-                    <span class="benefit-tag">Smart Contract Automation</span>
+                    <span class="benefit-tag">Built-in wallet</span>
+                    <span class="benefit-tag">Rent split on chain</span>
+                    <span class="benefit-tag">Ranked builders</span>
+                    <span class="benefit-tag">14 currencies</span>
+                    <span class="benefit-tag">Verified listings</span>
+                    <span class="benefit-tag">Escrow by contract</span>
                 </div>
             </div>
         </section>
 
 
 
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="first-part">
                 <p id="headbadge">FAQs</p>
                 <h2>Frequently asked questions</h2>
@@ -413,50 +426,48 @@
                     <div class="question">
                         <div>
                             <p>Is my property ownership secure on the blockchain?</p>
-                            <p class="answer">Absolutely. Your property ownership is recorded on the NEAR blockchain
-                                through smart contracts, which means it is immutable, transparent, and fully verifiable.
-                                Every ownership record, transaction, and agreement is cryptographically secured and
-                                cannot be altered or tampered with by any party. Additionally, NFT-backed ownership
-                                receipts provide a tamper-proof digital proof of your property rights that you can
-                                verify at any time.</p>
+                            <p class="answer">Ownership is recorded on NEAR by a smart contract, so no party can
+                                quietly change it. Not a buyer, not a seller, not us. Your NFT receipt is proof you can
+                                check yourself, at any time, without asking anyone.</p>
                         </div>
                         <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
                     </div>
 
                     <div class="question">
                         <div>
-                            <p>How do I generate income from my property once it's listed?</p>
-                            <p class="answer">Once your property is listed on Sheda Solutions, you can earn income in
-                                multiple ways. You can rent it out directly to verified tenants through
-                                blockchain-secured lease agreements, or sell it to buyers with smart contract-enforced
-                                payments. With upcoming fractional ownership features, you'll also be able to tokenize
-                                your property and offer fractional shares to investors, earning transparent yield
-                                distributions automatically through the platform — all without intermediaries.</p>
+                            <p>How do I earn from a property once it is listed?</p>
+                            <p class="answer">Let it to verified tenants on a lease the contract enforces, or sell it
+                                with payment released on the agreed terms. You can also split it into shares and let
+                                investors hold part of it, with the rent divided between them automatically.</p>
                         </div>
                         <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
                     </div>
 
                     <div class="question">
                         <div>
-                            <p>What kind of utilities can I access after importing my property?</p>
-                            <p class="answer">After importing your property on-chain, you unlock a full ecosystem of
-                                real estate services. This includes property management tools, legal and insurance
-                                services, technical maintenance coordination, and the ability to generate income through
-                                rentals or fractional ownership. Your on-chain property also serves as a verifiable
-                                asset that can be used across the Sheda ecosystem for various financial and utility
-                                services as the platform grows.</p>
+                            <p>What can I do with a property once it is on chain?</p>
+                            <p class="answer">Let it, manage it, or open it to investors as shares. It also becomes a
+                                verified asset the rest of Sheda can work with as management, legal and insurance
+                                services arrive.</p>
                         </div>
                         <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
                     </div>
 
                     <div class="question">
                         <div>
-                            <p>Do I need technical knowledge of blockchain to use this platform?</p>
-                            <p class="answer">Not at all. The platform handles chain abstraction, signatures, and
-                                blockchain complexity in the background. You interact with Sheda Solutions just like any
-                                modern app — browsing properties, making payments, and signing agreements — while the
-                                blockchain works quietly behind the scenes to secure your transactions, verify
-                                ownership, and execute smart contracts automatically.</p>
+                            <p>Do I need to understand blockchain to use this?</p>
+                            <p class="answer">No. The wallet is built into the app, so there is no extension to install
+                                and no seed phrase to look after. You browse, pay and sign the way you would in any
+                                other app, and the chain stays behind it.</p>
+                        </div>
+                        <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
+                    </div>
+                    <div class="question">
+                        <div>
+                            <p>Is this live, and is it holding real money?</p>
+                            <p class="answer">The app runs in your browser today. The marketplace is live, and
+                                fractional ownership runs on NEAR testnet with test funds. Nothing has been audited
+                                yet, so nothing here is asking you to risk anything.</p>
                         </div>
                         <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
                     </div>
@@ -467,8 +478,15 @@
         <section class="cta-banner" id="download-section">
             <div class="cta-banner-inner">
                 <div class="cta-banner-text">
-                    <h2>Get started now</h2>
-                    <p>The solution to stress-free real estate operations</p>
+                    <h2>Open it now</h2>
+                    <p>It runs in your browser. Nothing to install.</p>
+                    <div class="cta-actions">
+                        <a class="btn btn-on-red" href="https://sheda-solution-mobile--sheda-tt.expo.app"
+                            target="_blank" rel="noopener">Open the app</a>
+                        <a class="cta-secondary" href="https://t.me/+0freci5Se-pkMGVk" target="_blank"
+                            rel="noopener">Join the waitlist</a>
+                    </div>
+                    <p class="cta-stores-note">Android and iOS, soon</p>
                     <div class="cta-store-badges">
                         <div class="btn-wrapper">
                             <a href="#" class="coming-soon-trigger"><img
@@ -519,8 +537,8 @@
                 <ul>
                     <li>Help</li>
                     <li>Terms of use</li>
-                    <li>FAQs</li>
-                    <li>Support</li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="/contact.html">Support</a></li>
                 </ul>
             </div>
         </div>
@@ -536,6 +554,7 @@
                 <a href="https://www.instagram.com/shedasolutions?igsh=MW8xY2gweWdkMDNsMw==" target="_blank"><img
                         src="/images/facebook.png" alt="facebook"></a>
             </div>
+        </div>
     </footer>
 
     <script src="/js/main.js"></script>

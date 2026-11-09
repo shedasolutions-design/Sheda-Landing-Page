@@ -187,4 +187,84 @@ tabs.forEach((tab) => {
   );
 
   items.forEach((el) => seen.observe(el));
+
+  // A jump link can land past a section without that section ever having
+  // crossed the viewport, and the observer would then never fire for it.
+  // Anything at or above the fold is caught here instead of staying
+  // invisible until the reader scrolls back up to it.
+  function sweep() {
+    let left = 0;
+    items.forEach((el) => {
+      if (el.classList.contains("shown")) return;
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add("shown");
+        seen.unobserve(el);
+      } else {
+        left += 1;
+      }
+    });
+    if (!left) window.removeEventListener("scroll", sweep);
+  }
+
+  window.addEventListener("scroll", sweep, { passive: true });
+})();
+
+// ==============================================
+// Reading position, and which section you are in
+// ==============================================
+// Two small things that only apply to a page long enough to get lost on,
+// so both bail out quietly when their markup is absent. The nav's in-page
+// links are marked .jump; the page links are left alone.
+(function () {
+  const bar = document.querySelector(".scroll-progress span");
+  const jumps = Array.from(document.querySelectorAll('nav .menu a.jump'));
+  const homeLink = document.querySelector('nav .menu a[href="/index.html"]');
+
+  // Each link's target, in document order, skipping any anchor whose
+  // section is not on this page.
+  const marks = jumps
+    .map((link) => ({ link, el: document.getElementById(link.hash.slice(1)) }))
+    .filter((m) => m.el);
+
+  if (!bar && !marks.length) return;
+
+  let queued = false;
+
+  function paint() {
+    queued = false;
+
+    if (bar) {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
+      bar.style.width = Math.min(100, Math.max(0, ratio * 100)) + "%";
+    }
+
+    if (!marks.length) return;
+
+    // The section whose top is highest while still above the fold, which
+    // is the one being read rather than the one about to be.
+    const line = window.scrollY + 140;
+    let current = null;
+    for (const m of marks) {
+      if (m.el.offsetTop <= line) current = m;
+    }
+
+    // Past the bottom of the last section there is nothing to highlight,
+    // and at the top of the page Home is the honest answer.
+    for (const m of marks) {
+      m.link.classList.toggle("active", m === current);
+    }
+    if (homeLink) homeLink.classList.toggle("active", current === null);
+  }
+
+  function onScroll() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(paint);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  paint();
 })();

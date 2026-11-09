@@ -1,6 +1,8 @@
 const form = document.getElementById('myForm');
 
-form.addEventListener('submit', (event) => {
+// Only the contact page carries this form. Everywhere else the script is
+// loaded too, and binding to nothing threw on every one of those pages.
+if (form) form.addEventListener('submit', (event) => {
 
   event.preventDefault(); // Prevent default form submission
   const formData = new FormData(form);
