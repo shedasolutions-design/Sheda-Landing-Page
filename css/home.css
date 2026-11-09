@@ -154,6 +154,7 @@ html {
 .collections-copy #headbadge {
   width: auto;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .collections-cta {

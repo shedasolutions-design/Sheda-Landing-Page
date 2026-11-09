@@ -108,14 +108,8 @@ window.addEventListener("resize", () => {
 document.querySelectorAll(".toggle-answer").forEach((button) => {
   button.addEventListener("click", () => {
     const answer = button.closest(".question").querySelector(".answer");
-    answer.classList.toggle("show");
-    if (button.classList.contains("expanded")) {
-      button.src = "/images/arrow-down.svg";
-      button.classList.remove("expanded");
-    } else {
-      button.src = "/images/arrow-up.svg";
-      button.classList.add("expanded");
-    }
+    const open = answer.classList.toggle("show");
+    button.classList.toggle("expanded", open);
   });
 });
 

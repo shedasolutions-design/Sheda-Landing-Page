@@ -21,6 +21,29 @@
   color: #0f7a46;
 }
 
+/* nav a { color: #000 } in commonstyle outranks .btn on specificity, which
+   left the red button at the bottom of the mobile menu with black text. */
+nav .menu .mobile-cta-item .btn {
+  color: #fff;
+}
+
+/* The FAQ chevron turns rather than swapping to a second image. One less
+   request, and it animates. */
+.toggle-answer {
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.2s ease;
+}
+
+.toggle-answer.expanded {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle-answer { transition: none; }
+}
+
 /* ---- fractional ownership ---- */
 
 .collections-section {
