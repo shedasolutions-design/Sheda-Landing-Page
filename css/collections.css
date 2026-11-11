@@ -126,3 +126,21 @@ html.js-reveal .reveal.shown { opacity: 1; transform: none; }
   .collections-inner { grid-template-columns: 1fr; }
   .collections-art { order: -1; }
 }
+
+/* Hero badge, as text rather than an image so it says something true and
+   current ("100+ verified listings" was neither). Same look as the old one. */
+.verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 40px 0 0 40px;
+  padding: 10px 16px;
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(11, 11, 12, 0.12);
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
+}
