@@ -1018,3 +1018,50 @@ footer .foot-text {
     order: 2;
   }
 }
+/* "Open the app" banner button, shared by every page's closing banner.
+   (Also in home.css, which loads after this on the home page.) */
+.cta-banner-text {
+  padding-bottom: 56px;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-bottom: 22px;
+}
+
+/* .btn is red on white, which disappears on the red banner. */
+.btn.btn-on-red {
+  background-color: #fff;
+  color: #c1272d;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
+}
+
+.btn.btn-on-red:hover {
+  background-color: #fff;
+  color: #96161b;
+  transform: translateY(-1px);
+}
+
+.cta-stores-note {
+  font-family: "Manrope", sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 10px;
+}
+
+.cta-banner .cta-store-badges a img {
+  height: 38px;
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn.btn-on-red:hover {
+    transform: none;
+  }
+}
