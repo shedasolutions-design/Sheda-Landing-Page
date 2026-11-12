@@ -221,6 +221,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Collections ---------- */
 .section-invest { background: #fff; }
+/* Same red panel as the closing banner */
+.invest-box {
+  position: relative; overflow: hidden; padding: 72px 64px; border-radius: 32px; color: #fde9ea;
+  background: radial-gradient(80% 120% at 100% 0%, #e04349 0%, transparent 60%), linear-gradient(135deg, #c1272d, #8f1a1f);
+}
+.invest-box::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px); background-size: 40px 40px; mask-image: linear-gradient(90deg, #000, transparent 70%); pointer-events: none; }
+.invest-box > * { position: relative; }
+.invest-box h2 { color: #fff; }
+.invest-box .accent { color: #ffd0d2; }
+.invest-box .lead { color: #fbd3d5; }
+.invest-box .eyebrow { background: rgba(255, 255, 255, .16); color: #fff; }
+.invest-box .text-link { color: #fff; }
+.invest-box .example-panel { background: rgba(255, 255, 255, .12); }
+.invest-box .invest-step { border-color: transparent; box-shadow: 0 10px 24px rgba(80, 8, 12, .18); }
+.invest-box .shield-note { border-color: transparent; border-left-color: #fff; box-shadow: 0 10px 24px rgba(80, 8, 12, .18); }
 .invest-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: center; }
 .invest-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 36px; }
 .invest-step { padding: 20px; border-radius: var(--radius); background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow); }
@@ -418,6 +433,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .how-visual { order: -1; }
   .how-visual img { max-width: 380px; }
   .example-panel { margin: 0 auto; }
+  .invest-box { padding: 48px 32px; }
   .roadmap { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
   .roadmap::before { display: none; }
   .cta-box { grid-template-columns: 1fr; padding: 48px 32px 0; text-align: center; }
@@ -432,6 +448,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .feature-strip ul, .compare, .invest-steps, .pillars, .roadmap, .form-grid { grid-template-columns: 1fr; }
   .compare-card p { padding-left: 0; }
   .example-panel { padding: 20px; border-radius: 24px; }
+  .invest-box { padding: 36px 18px; border-radius: 24px; }
   .example-body { padding: 18px 18px 20px; }
   .float-card { display: none; }
   .hero-actions .btn, .cta-actions .btn { width: 100%; }
