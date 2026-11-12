@@ -1,577 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="/font/Inter/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/font/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
-    <meta name="description"
-        content="Buy, rent and invest in property without the risk. Deal directly with owners, pay through secure escrow that only releases when the papers are yours, and own a share of new buildings. No agent fees.">
-    <meta name="keywords" content="Sheda Solutions, real estate, blockchain, fractional ownership, property escrow, smart contracts, NEAR">
-    <meta name="author" content="Sheda Solutions">
+    <title>Sheda Solutions | Revolutionizing real estate operations</title>
+    <meta name="description" content="Buy, rent and invest in property directly with owners. Every payment is held in escrow until the deal is done. No agent fees, no guesswork.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://www.sheda.app/">
     <link rel="icon" href="/images/shedddddddddd-1.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/shedddddddddd-1.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Sheda Solutions">
     <meta property="og:url" content="https://www.sheda.app/">
     <meta property="og:title" content="Sheda Solutions | Revolutionizing real estate operations">
-    <meta property="og:description" content="Deal directly with owners, pay through secure escrow, and own a share of new buildings. No agent fees.">
+    <meta property="og:description" content="Buy, rent and invest in property directly with owners. Every payment is held in escrow until the deal is done. No agent fees, no guesswork.">
     <meta property="og:image" content="https://www.sheda.app/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sheda Solutions | Revolutionizing real estate operations">
-    <meta name="twitter:description" content="Deal directly with owners, pay through secure escrow, and own a share of new buildings. No agent fees.">
+    <meta name="twitter:description" content="Buy, rent and invest in property directly with owners. Every payment is held in escrow until the deal is done. No agent fees, no guesswork.">
     <meta name="twitter:image" content="https://www.sheda.app/images/og-image.png">
-    <title>Sheda Solutions | Revolutionizing real estate operations</title>
-    <link rel="stylesheet" href="/css/commonstyle.css">
-    <link rel="stylesheet" href="/css/main2.css">
-    <link rel="stylesheet" href="/css/forms.css">
-    <link rel="stylesheet" href="/css/tabs.css">
-    <link rel="stylesheet" href="/css/roadmap.css">
-    <link rel="stylesheet" href="/css/why-choose.css">
-    <link rel="stylesheet" href="/css/collections.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="preload" href="/font/Manrope/Manrope-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/font/Inter/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="/css/site.css">
 </head>
-
 <body>
-
-    <header>
-        <div class="scroll-progress" aria-hidden="true"><span></span></div>
-        <nav>
-
-            <div class="navWrapper">
-                <div class="menuLogo">
-                    <div class="logo">
-                        <img src="/images/shedddddddddd-1.png" alt="Logo">
-                        <span>SHEDA SOLUTIONS</span>
-                    </div>
-
-                    <img id="menu-toggle" src="/images/toggle-button.svg" alt="toggle button">
-
-                </div>
-
-
-                <!-- <div class="navItem"> -->
-                <ul class="menu">
-                    <li><a class="active" href="/index.html">Home</a></li>
-                    <li><a class="jump" href="#how-it-works">How it works</a></li>
-                    <li><a class="jump" href="#collections">Collections</a></li>
-                    <li><a class="jump" href="#roadmap">Roadmap</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="/" aria-label="Sheda Solutions home">
+                <img src="/images/shedddddddddd-1.png" alt="" width="34" height="34">
+                <span>Sheda Solutions</span>
+            </a>
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <ul class="nav-links">
+                    <li><a href="/" data-home class="active">Home</a></li>
+                    <li><a href="#how-it-works" data-section="how-it-works">How it works</a></li>
+                    <li><a href="#collections" data-section="collections">Collections</a></li>
+                    <li><a href="#roadmap" data-section="roadmap">Roadmap</a></li>
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/contact.html">Contact</a></li>
-                    <li><a href="https://sheda-solutions.gitbook.io/sheda-solutions" target="_blank">Docs</a></li>
+                    <li><a href="https://sheda-solutions.gitbook.io/sheda-solutions" target="_blank" rel="noopener">Docs</a></li>
+                    <li class="nav-cta-mobile"><a class="btn btn-primary" href="https://market.sheda.app">Open the app</a></li>
                 </ul>
-                <!-- </div> -->
-
-                <div class="btn-wrapper nav-btn">
-                    <a href="https://market.sheda.app" target="_blank" rel="noopener" class="btn">Open the app</a>
-                </div>
-
+            </nav>
+            <div class="nav-actions">
+                <a class="btn btn-primary btn-sm" href="https://market.sheda.app">Open the app</a>
+                <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-
-        </nav>
-
+        </div>
+        <div class="scroll-progress" aria-hidden="true"><span></span></div>
     </header>
 
-    <main>
-
-        <section class="how-it-works">
-            <div class="hero">
-                <!-- <div class="grid-background"></div> -->
-                <div class="frame48095733">
-                    <h1>Revolutionizing real estate operations</h1>
-                    <p>Deal directly with owners and pay through secure escrow that only releases when the papers are yours.
-                        No agent fees, no runaround. Or own a share of a new building and earn from the rent.</p>
-                    <div id="image-container">
-                        <a href="https://market.sheda.app" target="_blank" rel="noopener" class="hero-btn">
-                            <img src="/images/svg/get-app-button.svg" alt="Open the app">
-                        </a>
-                        <a href="https://t.me/+0freci5Se-pkMGVk" target="_blank" class="hero-btn">
-                            <img src="/images/svg/join-waitlist-button.svg" alt="Join Waitlist">
-                        </a>
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow"><span class="live-dot"></span>Now in early access</span>
+                    <h1>Revolutionizing real estate <span class="accent">operations</span></h1>
+                    <p class="lead">Buy, rent and invest in property directly with owners. Your money waits safely in escrow and is only released when the deal is done. No agents. No hidden fees. No guesswork.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="https://market.sheda.app">Open the app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        <a class="btn btn-ghost" href="#how-it-works">See how it works</a>
                     </div>
+                    <ul class="trust-row">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>No agent fees</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Escrow on every deal</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Nothing to download</li>
+                    </ul>
                 </div>
-
-                <div class="heroImageContainer">
-                    <!-- Verified Listings Badge - Desktop Only -->
-                    <div class="verified-badge">
-                        <span class="verified-pill">
-                            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="#0f7a46" stroke-width="2"/><path d="m8 12.5 2.6 2.6L16 9.6" fill="none" stroke="#0f7a46" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Every payment protected by escrow
-                        </span>
-                    </div>
-
-                    <!-- Hero Phone Mockup -->
-                    <img src="/images/svg/phone-mockups.svg" alt="Sheda Solutions Mobile App Interface"
-                        class="hero-phone">
-
-                    <!-- Property Owner Card - Desktop Only -->
-                    <div class="property-owner-card">
-                        <img src="/images/svg/property-owner.svg" alt="Property Owner" class="owner-avatar">
-                        <div class="owner-info">
-                            <p class="owner-name">Property Owner</p>
-                            <div class="owner-status">
-                                <span class="status-text">Active now</span>
-                                <span class="status-dot"></span>
-                            </div>
-                        </div>
-                        <div class="owner-actions">
-                            <button class="action-btn action-menu">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" strokeWidth="2"
-                                        strokeLinecap="round" />
-                                </svg>
-                            </button>
-                            <button class="action-btn action-primary">
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"
-                                        fill="white" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
+                <div class="hero-visual">
+                    <img src="/images/svg/phone-mockups.svg" alt="The Sheda app showing property listings" width="588" height="506">
+                    <div class="float-card float-escrow"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></span><div><strong>Payment held in escrow</strong><span>Released when the deal is done</span></div></div>
+                    <div class="float-card float-owner"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c1.2-3.6 4.1-5.5 7.5-5.5s6.3 1.9 7.5 5.5"/></svg></span><div><strong>Talking to the owner</strong><span>No agent in the middle</span></div></div>
                 </div>
-
             </div>
+        </section>
 
-            <section class="proof-strip" aria-label="What the app gives you">
+        <section class="feature-strip" aria-label="What you get">
+            <div class="container">
                 <ul>
-                    <li>
-                        <strong>Deal with the owner</strong>
-                        <span>Book viewings and negotiate directly. No agent fees.</span>
-                    </li>
-                    <li>
-                        <strong>Escrow-protected payments</strong>
-                        <span>Your money is held safely until the deal is done.</span>
-                    </li>
-                    <li>
-                        <strong>A wallet built in</strong>
-                        <span>Nothing to install. Back it up in one tap.</span>
-                    </li>
-                    <li>
-                        <strong>Pay your way</strong>
-                        <span>See prices in 24 currencies, including naira.</span>
-                    </li>
+                    <li class="reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1.5 1.5 0 0 0 2.1-2.1"/><path d="m14 14 2.5 2.5a1.5 1.5 0 0 0 2.1-2.1l-3.9-3.9a2 2 0 0 0-2.8 0l-.9.9a1.5 1.5 0 0 1-2.1-2.1L11.6 6.6a3 3 0 0 1 3.6-.5l.6.3a3 3 0 0 0 2 .2L20 6"/><path d="m21 15-1-1M3 6l2.2.6a3 3 0 0 0 2-.2l.6-.3"/><path d="M3 14.5 8 19.5"/></svg></span><div><strong>Deal with the owner</strong><span>Book viewings and negotiate directly.</span></div></li>
+                    <li class="reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg></span><div><strong>Escrow-protected</strong><span>Your money is safe until the deal is done.</span></div></li>
+                    <li class="reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V5.5A1.5 1.5 0 0 0 17.5 4h-12A2.5 2.5 0 0 0 3 6.5v11A2.5 2.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/><path d="M21 10.5h-4.5a2 2 0 0 0 0 4H21z"/></svg></span><div><strong>Wallet built in</strong><span>Nothing to install. Back it up in one tap.</span></div></li>
+                    <li class="reveal"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><strong>Pay your way</strong><span>Prices in 24 currencies, including naira.</span></div></li>
                 </ul>
-            </section>
-
-            <div class="containerA" id="how-it-works">
-
-
-                <div class="text-container">
-                    <h3 id="headbadge">How it works</h3>
-                    <h2>Three simple steps</h2>
-                    <p>Whether you're finding a property or selling one.</p>
-
-                    <!-- Tab Navigation -->
-                    <div class="tab-container">
-                        <button class="tab-button active" data-tab="buyer-content">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                            I'm Buying/Renting
-                        </button>
-                        <button class="tab-button" data-tab="seller-content">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" />
-                                <path d="M9 22V12h6v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                            I'm Selling/Listing
-                        </button>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <img src="/images/iphone12 with backg.png" alt="iphone 12">
-                </div>
             </div>
-
-            <!-- Buyer Journey -->
-            <div id="buyer-content" class="tab-content active">
-                <div class="containerC">
-                    <div id="container-card">
-                        <div class="card-number">1</div>
-                        <h3>Find it</h3>
-                        <p>Browse verified listings by location, budget and what matters to you.</p>
-                    </div>
-                    <div id="container-card">
-                        <div class="card-number">2</div>
-                        <h3>See it</h3>
-                        <p>Book a viewing straight from the owner's calendar.</p>
-                    </div>
-                    <div id="container-card">
-                        <div class="card-number">3</div>
-                        <h3>Secure it</h3>
-                        <p>Agree terms, pay into escrow, and receive your documents securely.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seller Journey -->
-            <div id="seller-content" class="tab-content">
-                <div class="containerC">
-                    <div id="container-card">
-                        <div class="card-number">1</div>
-                        <h3>List it</h3>
-                        <p>Add photos and a price. Your listing goes live in minutes.</p>
-                    </div>
-                    <div id="container-card">
-                        <div class="card-number">2</div>
-                        <h3>Choose your buyer</h3>
-                        <p>Compare offers and negotiate, all inside the app.</p>
-                    </div>
-                    <div id="container-card">
-                        <div class="card-number">3</div>
-                        <h3>Get paid</h3>
-                        <p>Hand over the documents and your money is released at once.</p>
-                    </div>
-                </div>
-            </div>
-
         </section>
 
-        <!-- Fractional ownership. Sits before the roadmap because it is no
-             longer a thing that is coming. -->
-        <section class="collections-section" id="collections">
-            <div class="collections-inner">
-                <div class="collections-copy reveal">
-                    <h3 id="headbadge">Sheda Collections</h3>
-                    <h2>Own a piece of a building</h2>
-                    <p>
-                        Invest in new homes for a fraction of the price, and earn <span class="emphasis">your share of the rent</span>.
-                    </p>
-
-                    <div class="chain-row">
-                        <div class="chain-node">
-                            <span class="std">Step 1</span>
-                            <strong>Choose a project</strong>
-                            <span>Browse new builds with photos, plans and rated builders.</span>
-                        </div>
-                        <div class="chain-node">
-                            <span class="std">Step 2</span>
-                            <strong>Buy shares</strong>
-                            <span>Invest as much or as little as you like. Builders are paid stage by stage, after each stage is inspected.</span>
-                        </div>
-                        <div class="chain-node">
-                            <span class="std">Step 3</span>
-                            <strong>Earn rent</strong>
-                            <span>When the building is finished and let, your share of the rent arrives automatically.</span>
-                        </div>
-                    </div>
-
-                    <div class="collections-cta">
-                        <a class="btn" href="https://market.sheda.app/invest" target="_blank"
-                            rel="noopener">Start investing</a>
-                        <a class="link-secondary" href="https://market.sheda.app/collections/new-raise"
-                            target="_blank" rel="noopener">Builders: raise funds</a>
-                        <span class="cta-note">Now in early access.</span>
-                    </div>
+        <section class="section" id="why-we-built">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Why we built Sheda</span>
+                    <h2 class="h2">Property shouldn't run on <span class="accent">blind trust</span></h2>
+                    <p class="lead">Renting or buying a home has always meant handing your money to strangers and hoping for the best. We built a better way.</p>
                 </div>
-
-                <div class="collections-art reveal">
-                    <img src="/images/svg/fractional-ownership.svg"
-                        alt="Fractional ownership of a property" loading="lazy">
+                <div class="compare">
+                    <article class="compare-card reveal">
+                        <p class="old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg><s>Agent fees stacked on top of the price</s></p>
+                        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Deal directly with the owner</h3>
+                        <p>Find, view and negotiate with the person who holds the keys. No commission on top.</p>
+                    </article>
+                    <article class="compare-card reveal">
+                        <p class="old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg><s>Fake listings and homes sold twice</s></p>
+                        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Ownership you can check</h3>
+                        <p>Every property is recorded on the blockchain, so who owns what is never in doubt.</p>
+                    </article>
+                    <article class="compare-card reveal">
+                        <p class="old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg><s>Deposits that disappear</s></p>
+                        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Money held in escrow</h3>
+                        <p>Your payment waits safely and is released only when both sides have done their part.</p>
+                    </article>
+                    <article class="compare-card reveal">
+                        <p class="old"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg><s>Endless paperwork and lost files</s></p>
+                        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.3 2.3 4.7-5"/></svg>Documents always to hand</h3>
+                        <p>Agreements are signed and stored securely, ready on any device whenever you need them.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Roadmap Section -->
-        <section id="roadmap" class="roadmap-section">
-            <div class="roadmap-header">
-                <h3 id="headbadge">Roadmap</h3>
-                <h2>Where we're headed</h2>
-            </div>
-
-            <div class="roadmap-timeline reveal">
-                <!-- Timeline Line -->
-                <div class="timeline-line"></div>
-
-                <!-- Milestone Cards -->
-                <div class="roadmap-cards">
-                    <!-- Card 1 -->
-                    <div class="roadmap-card">
-                        <div class="timeline-connector"></div>
-                        <div class="milestone-badge">1</div>
-                        <img class="stage-art" src="/images/svg/market-place.svg" alt="" loading="lazy" decoding="async">
-                        <span class="stage-status shipped">Early access</span>
-                        <h3>Marketplace</h3>
-                        <p>Rent, buy and sell directly, with every payment held in escrow.</p>
+        <section class="section section-soft" id="how-it-works">
+            <div class="container how-grid">
+                <div>
+                    <div class="section-head left reveal" style="margin-bottom:0">
+                        <span class="eyebrow">How it works</span>
+                        <h2 class="h2">From search to keys in three simple steps</h2>
+                        <p class="lead">Whether you're finding a home or selling one, Sheda keeps every step clear.</p>
                     </div>
-
-                    <!-- Card 2 -->
-                    <div class="roadmap-card">
-                        <div class="timeline-connector"></div>
-                        <div class="milestone-badge">2</div>
-                        <img class="stage-art" src="/images/svg/fractional-ownership.svg" alt="" loading="lazy" decoding="async">
-                        <span class="stage-status testnet">Early access</span>
-                        <h3>Fractional ownership</h3>
-                        <p>Own shares in new buildings and earn from their rent.
-                            <a class="card-link" href="#collections">How it works</a></p>
+                    <div class="tabs" role="tablist" aria-label="Choose your side">
+                        <button class="tab" type="button" role="tab" id="tab-buy" aria-controls="panel-buy" aria-selected="true" data-img="/images/iphone12 with backg.png" data-alt="Browsing homes in the Sheda app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buying or renting</button>
+                        <button class="tab" type="button" role="tab" id="tab-sell" aria-controls="panel-sell" aria-selected="false" tabindex="-1" data-img="/images/property-management.png" data-alt="Listing a property in the Sheda app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10.5 9-7 9 7V19a2 2 0 0 1-2 2h-4v-6h-6v6H5a2 2 0 0 1-2-2z"/></svg>Selling or letting</button>
                     </div>
-
-                    <!-- Card 3 -->
-                    <div class="roadmap-card">
-                        <div class="timeline-connector"></div>
-                        <div class="milestone-badge">3</div>
-                        <img class="stage-art" src="/images/svg/real-estate.svg" alt="" loading="lazy" decoding="async">
-                        <span class="stage-status planned">Coming next</span>
-                        <h3>Real estate services</h3>
-                        <p>Property management, legal, insurance and maintenance, booked in the app.</p>
+                    <div class="tab-panel" id="panel-buy" role="tabpanel" aria-labelledby="tab-buy">
+                        <ol class="steps">
+                            <li class="step"><span class="step-num">1</span><div><h3>Find it</h3><p>Search homes by location, budget and type, from studio flats to land.</p></div></li>
+                            <li class="step"><span class="step-num">2</span><div><h3>See it</h3><p>Book a viewing straight from the owner's calendar. No back-and-forth calls.</p></div></li>
+                            <li class="step"><span class="step-num">3</span><div><h3>Secure it</h3><p>Agree the terms and pay into escrow. The money moves only when the documents are yours.</p></div></li>
+                        </ol>
                     </div>
-
-                    <!-- Card 4 -->
-                    <div class="roadmap-card">
-                        <div class="timeline-connector"></div>
-                        <div class="milestone-badge">4</div>
-                        <img class="stage-art" src="/images/svg/on-chain.svg" alt="" loading="lazy" decoding="async">
-                        <span class="stage-status planned">Planned</span>
-                        <h3>Bring your own property</h3>
-                        <p>Put a property you already own on Sheda in minutes.</p>
+                    <div class="tab-panel" id="panel-sell" role="tabpanel" aria-labelledby="tab-sell" hidden>
+                        <ol class="steps">
+                            <li class="step"><span class="step-num">1</span><div><h3>List it</h3><p>Add photos, a price and your viewing hours. You're live in minutes.</p></div></li>
+                            <li class="step"><span class="step-num">2</span><div><h3>Meet serious buyers</h3><p>Take viewings and compare offers, all in one place.</p></div></li>
+                            <li class="step"><span class="step-num">3</span><div><h3>Get paid</h3><p>Hand over the documents and your payment is released straight to you.</p></div></li>
+                        </ol>
                     </div>
+                </div>
+                <div class="how-visual reveal">
+                    <img src="/images/iphone12 with backg.png" alt="Browsing homes in the Sheda app" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Sheda Solutions Section -->
-        <section class="why-choose-section">
-            <span class="section-badge">Why Sheda</span>
-            <h2 class="section-title">Affable. Available. Affordable. Secure.</h2>
-
-            <div class="benefits-grid">
-                <!-- Left Column -->
-                <div class="benefits-col-left">
-                    <!-- Available Card -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
-                                    stroke="#C1272D" stroke-width="2" stroke-linecap="round" />
-                                <path d="M12 6v6l4 2" stroke="#C1272D" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3 class="benefit-title">Available</h3>
-                        <p class="benefit-desc">Your deals and documents on any device, any time.</p>
+        <section class="section section-dark" id="collections">
+            <div class="container invest-grid">
+                <div class="reveal">
+                    <span class="eyebrow">Sheda Collections</span>
+                    <h2 class="h2">Own a piece of a building. <span class="accent">Earn from the rent.</span></h2>
+                    <p class="lead">Property investing used to take millions. Now you can buy shares in new homes with what you can afford, and earn your share of the rent once they're let.</p>
+                    <div class="invest-steps">
+                        <div class="invest-step"><span class="n">Step 1</span><h3>Choose a project</h3><p>Browse new builds with photos, plans and rated builders.</p></div>
+                        <div class="invest-step"><span class="n">Step 2</span><h3>Buy shares</h3><p>Invest as much or as little as you like.</p></div>
+                        <div class="invest-step"><span class="n">Step 3</span><h3>Earn rent</h3><p>Your share of the rent arrives automatically.</p></div>
                     </div>
-
-                    <!-- Affordable Card -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="2" y="4" width="20" height="16" rx="3" stroke="#C1272D" stroke-width="2" />
-                                <path d="M2 10h20" stroke="#C1272D" stroke-width="2" />
-                                <path d="M6 15h4" stroke="#C1272D" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3 class="benefit-title">Affordable</h3>
-                        <p class="benefit-desc">No agent commission, and invest for a fraction of the price.</p>
+                    <p class="shield-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg><span><strong>Your money moves only as the building rises.</strong> Builders are paid stage by stage, and only after each stage passes inspection.</span></p>
+                    <div class="invest-actions">
+                        <a class="btn btn-primary" href="https://market.sheda.app/invest">Start investing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        <a class="text-link" href="https://market.sheda.app/collections/new-raise">Builders: raise funds for your project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                     </div>
                 </div>
-
-                <!-- Center Mockup -->
-                <div class="benefits-center">
-                    <img src="/images/svg/why-choose.svg" alt="Sheda Solutions App Mockup">
-                </div>
-
-                <!-- Right Column -->
-                <div class="benefits-col-right">
-                    <!-- Affable Card -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#C1272D" stroke-width="2" />
-                                <rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#C1272D" stroke-width="2" />
-                                <rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#C1272D" stroke-width="2" />
-                                <rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#C1272D" stroke-width="2" />
+                <div class="reveal">
+                    <article class="project-card" aria-label="Example of a Sheda Collections project">
+                        <div class="project-art">
+                            <span class="project-tag">Example project</span>
+                            <svg viewBox="0 0 440 170" aria-hidden="true">
+                                <rect x="40" y="40" width="120" height="130" rx="4" fill="#c1272d" opacity=".9"/>
+                                <rect x="170" y="10" width="120" height="160" rx="4" fill="#2a1d22"/>
+                                <rect x="300" y="60" width="100" height="110" rx="4" fill="#c1272d" opacity=".55"/>
+                                <g fill="#fff" opacity=".85">
+                                    <rect x="58" y="60" width="22" height="16" rx="2"/><rect x="92" y="60" width="22" height="16" rx="2"/><rect x="126" y="60" width="18" height="16" rx="2"/>
+                                    <rect x="58" y="92" width="22" height="16" rx="2"/><rect x="92" y="92" width="22" height="16" rx="2"/><rect x="126" y="92" width="18" height="16" rx="2"/>
+                                    <rect x="58" y="124" width="22" height="16" rx="2"/><rect x="126" y="124" width="18" height="16" rx="2"/>
+                                    <rect x="318" y="80" width="20" height="14" rx="2"/><rect x="352" y="80" width="20" height="14" rx="2"/>
+                                    <rect x="318" y="108" width="20" height="14" rx="2"/><rect x="352" y="108" width="20" height="14" rx="2"/>
+                                </g>
+                                <g fill="#f0c9cb" opacity=".7">
+                                    <rect x="188" y="30" width="24" height="18" rx="2"/><rect x="224" y="30" width="24" height="18" rx="2"/><rect x="260" y="30" width="18" height="18" rx="2"/>
+                                    <rect x="188" y="64" width="24" height="18" rx="2"/><rect x="224" y="64" width="24" height="18" rx="2"/><rect x="260" y="64" width="18" height="18" rx="2"/>
+                                    <rect x="188" y="98" width="24" height="18" rx="2"/><rect x="224" y="98" width="24" height="18" rx="2"/><rect x="260" y="98" width="18" height="18" rx="2"/>
+                                </g>
+                                <rect x="214" y="134" width="32" height="36" rx="3" fill="#c1272d"/>
                             </svg>
                         </div>
-                        <h3 class="benefit-title">Affable</h3>
-                        <p class="benefit-desc">As easy as any app on your phone.</p>
-                    </div>
-
-                    <!-- Secure Card -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect x="5" y="10" width="14" height="11" rx="2" stroke="#C1272D" stroke-width="2" />
-                                <path d="M8 10V7a4 4 0 1 1 8 0v3" stroke="#C1272D" stroke-width="2"
-                                    stroke-linecap="round" />
-                                <circle cx="12" cy="15" r="1.5" fill="#C1272D" />
-                            </svg>
+                        <div class="project-body">
+                            <h3>Garden Court Residences</h3>
+                            <p class="project-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lekki, Lagos</p>
+                            <div class="bar"><span></span></div>
+                            <div class="bar-row"><span><b>$131,200</b> raised of $205,000</span><span class="pct">64%</span></div>
+                            <div class="project-stats">
+                                <div><span>Investors</span><b>148</b></div>
+                                <div><span>Units</span><b>12 homes</b></div>
+                                <div><span>Payout</span><b>Rent share</b></div>
+                            </div>
+                            <div class="stage-list" aria-hidden="true"><span class="done"></span><span class="done"></span><span></span><span></span></div>
+                            <p class="stage-caption">2 of 4 build stages inspected and paid</p>
                         </div>
-                        <h3 class="benefit-title">Secure</h3>
-                        <p class="benefit-desc">Payments held in escrow, and ownership recorded on the blockchain.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Benefits -->
-            <div class="additional-benefits">
-                <h2 class="additional-title">And there's more</h2>
-                <div class="benefits-tags">
-                    <span class="benefit-tag">Built-in wallet</span>
-                    <span class="benefit-tag">Rent shared automatically</span>
-                    <span class="benefit-tag">Rated builders</span>
-                    <span class="benefit-tag">24 currencies</span>
-                    <span class="benefit-tag">Verified listings</span>
-                    <span class="benefit-tag">Escrow-protected payments</span>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <section class="section" id="why-sheda">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Why Sheda</span>
+                    <h2 class="h2">Affable. Available. Affordable. Secure.</h2>
+                    <p class="lead">Four promises behind everything we build.</p>
+                </div>
 
-
-        <section class="faq" id="faq">
-            <div class="first-part">
-                <p id="headbadge">FAQs</p>
-                <h2>Frequently asked questions</h2>
-            </div>
-            <div class="second-part">
-                <div class="questions">
-                    <div class="question">
-                        <div>
-                            <p>Is my property ownership secure?</p>
-                            <p class="answer">Yes. Ownership is recorded on the NEAR blockchain, so nobody can quietly change it: not a buyer,
-                                not a seller, not even Sheda. You can check your proof of ownership yourself, any time.</p>
-                        </div>
-                        <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
-                    </div>
-
-                    <div class="question">
-                        <div>
-                            <p>How do I earn from my property?</p>
-                            <p class="answer">Rent it out on a lease Sheda enforces for you, or sell it with payment released on the agreed terms.
-                                You can also open it to investors as shares, with the rent shared out automatically.</p>
-                        </div>
-                        <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
-                    </div>
-
-                    <div class="question">
-                        <div>
-                            <p>What else can I do once my property is on Sheda?</p>
-                            <p class="answer">Rent it, manage it, or open it to investors. As property management, legal and insurance services
-                                arrive, they'll work with it from day one.</p>
-                        </div>
-                        <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
-                    </div>
-
-                    <div class="question">
-                        <div>
-                            <p>Do I need to understand blockchain?</p>
-                            <p class="answer">Not at all. The wallet is built into the app, so there's nothing to install. You browse, pay and sign
-                                like in any other app, and the blockchain works quietly in the background.</p>
-                        </div>
-                        <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
-                    </div>
-                    <div class="question">
-                        <div>
-                            <p>Can I use Sheda today?</p>
-                            <p class="answer">Yes. Sheda is in early access and runs in your browser, with no download needed. During early access,
-                                transactions run on the NEAR test network, so you can explore every feature risk-free while we
-                                complete our independent security audit.</p>
-                        </div>
-                        <img class="toggle-answer" src="/images/arrow-down.svg" alt="toggle answer">
-                    </div>
+                <div class="pillars">
+                    <article class="pillar reveal" data-letter="A">
+                        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8M9 9.5h.01M15 9.5h.01"/></svg></div>
+                        <h3>Affable</h3>
+                        <p>Simple enough for anyone. If you can use WhatsApp, you can use Sheda.</p>
+                    </article>
+                    <article class="pillar reveal" data-letter="A">
+                        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                        <h3>Available</h3>
+                        <p>Open it in any browser, on any device, at any hour. Your deals and documents go where you go.</p>
+                    </article>
+                    <article class="pillar reveal" data-letter="A">
+                        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M15 11.2c3.4.3 6 1.6 6 3.1 0 1.7-2.7 3-6 3-1.5 0-2.9-.3-4-.7"/><path d="M3 12v5c0 1.7 2.7 3 6 3 1.2 0 2.4-.2 3.3-.5"/></svg></div>
+                        <h3>Affordable</h3>
+                        <p>No agent commission on top of the price, and you can invest in property for a fraction of the cost.</p>
+                    </article>
+                    <article class="pillar reveal" data-letter="S">
+                        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div>
+                        <h3>Secure</h3>
+                        <p>Every payment waits in escrow, and every ownership record lives on the blockchain where no one can quietly change it.</p>
+                    </article>
+                </div>
+                <div class="extras reveal">
+                    <p>Also built in</p>
+                    <ul class="chips">
+                        <li>Built-in wallet</li>
+                        <li>One-tap Google backup</li>
+                        <li>Viewing calendar</li>
+                        <li>24 currencies</li>
+                        <li>Rent shared automatically</li>
+                        <li>Rated builders</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="cta-banner" id="download-section">
-            <div class="cta-banner-inner">
-                <div class="cta-banner-text">
-                    <h2>Ready to find your next property?</h2>
-                    <p>Sheda runs right in your browser. No download, no agent fees.</p>
-                    <div class="cta-actions">
-                        <a class="btn btn-on-red" href="https://market.sheda.app"
-                            target="_blank" rel="noopener">Open the app</a>
-                        <a class="cta-secondary" href="https://t.me/+0freci5Se-pkMGVk" target="_blank"
-                            rel="noopener">Join the waitlist</a>
-                    </div>
-                    <p class="cta-stores-note">Android and iOS apps coming soon</p>
-                    <div class="cta-store-badges">
-                        <div class="btn-wrapper">
-                            <a href="#" class="coming-soon-trigger"><img
-                                src="/images/Google Play Badge US.png" alt="Get it on Google Play"></a>
-                            <div class="coming-soon-tooltip">Coming Soon</div>
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="#" class="ios-download-btn coming-soon-trigger"><img src="/images/App Store Badge US Black.png"
-                                    alt="Download on the App Store"></a>
-                            <div id="iosComingSoon" class="popup-tooltip coming-soon-tooltip">Coming Soon</div>
-                        </div>
-                    </div>
+        <section class="section section-soft" id="roadmap">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Roadmap</span>
+                    <h2 class="h2">Where we're headed</h2>
+                    <p class="lead">We're building one home for everything real estate, one step at a time.</p>
                 </div>
-                <div class="cta-banner-phones">
-                    <img class="phone-back" src="/images/iPhone 13 Pro.png" alt="Sheda Solutions app">
-                    <!-- <img class="phone-front" src="/images/iphone12 with backg.png" alt="Sheda Solutions app"> -->
+                <ol class="roadmap">
+                    <li class="milestone reveal live">
+                        <span class="dot">1</span>
+                        <div class="card">
+                            <span class="status live">Early access</span>
+                            <h3>Marketplace</h3>
+                            <p>Rent, buy and sell directly, with every payment held in escrow.</p>
+                        </div>
+                    </li>
+                    <li class="milestone reveal live">
+                        <span class="dot">2</span>
+                        <div class="card">
+                            <span class="status live">Early access</span>
+                            <h3>Sheda Collections</h3>
+                            <p>Own shares in new buildings and earn from their rent.</p>
+                        </div>
+                    </li>
+                    <li class="milestone reveal">
+                        <span class="dot">3</span>
+                        <div class="card">
+                            <span class="status next">Coming next</span>
+                            <h3>Real estate services</h3>
+                            <p>Property management, legal, insurance and maintenance, booked in the app.</p>
+                        </div>
+                    </li>
+                    <li class="milestone reveal">
+                        <span class="dot">4</span>
+                        <div class="card">
+                            <span class="status planned">Planned</span>
+                            <h3>Bring your own property</h3>
+                            <p>Put a property you already own on Sheda and unlock everything it can do.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">FAQs</span>
+                    <h2 class="h2">Questions, answered</h2>
+                    <p class="lead">Can't find what you're looking for? <a class="text-link" href="/contact.html">Talk to us</a></p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item reveal" open>
+                        <summary>How does escrow protect my money?</summary>
+                        <div class="answer"><p>When you pay, the money doesn't go straight to the other side. It's held by a smart contract, a program no one can tamper with, and released only when the deal is complete. Not a buyer, a seller or even Sheda can take it early.</p></div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>Is my property ownership secure?</summary>
+                        <div class="answer"><p>Yes. Ownership is recorded on the NEAR blockchain, so nobody can quietly change it. You can check your proof of ownership yourself, any time, without asking anyone.</p></div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>Do I need to understand crypto or blockchain?</summary>
+                        <div class="answer"><p>Not at all. The wallet is built into the app, so there's nothing to install, and you can back it up to your Google account in one tap. You browse, pay and sign just like any other app, while the blockchain works quietly in the background.</p></div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>How does investing in Sheda Collections work?</summary>
+                        <div class="answer"><p>Choose a new building, buy as many shares as you like, and receive your share of the rent once it's finished and let. Builders are paid in stages, and only after each stage passes inspection, so your money moves only as the building rises.</p></div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>How do I earn from my own property?</summary>
+                        <div class="answer"><p>Rent it out on a lease Sheda enforces for you, or sell it with payment released on the agreed terms. You can also open it to investors as shares, with the rent shared out automatically.</p></div>
+                    </details>
+                    <details class="faq-item reveal">
+                        <summary>Can I use Sheda today?</summary>
+                        <div class="answer"><p>Yes. Sheda is in early access and runs in your browser, with nothing to download. During early access, transactions run on the NEAR test network, so you can explore every feature risk-free while we complete our independent security audit.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <div>
+                        <h2>Your next property is a few taps away.</h2>
+                        <p class="lead">Open Sheda in your browser and start today. No download, no agent fees.</p>
+                        <div class="cta-actions">
+                            <a class="btn btn-light" href="https://market.sheda.app">Open the app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                            <a class="btn btn-outline-light" href="https://t.me/+0freci5Se-pkMGVk" target="_blank" rel="noopener">Join our community</a>
+                        </div>
+                        <div class="stores">
+                            <span>Android and iOS apps coming soon</span>
+                            <a class="store" href="#" aria-label="Google Play, coming soon"><img src="/images/Google Play Badge US.png" alt="" loading="lazy"><span class="soon">Coming soon</span></a>
+                            <a class="store" href="#" aria-label="App Store, coming soon"><img src="/images/App Store Badge US Black.png" alt="" loading="lazy"><span class="soon">Coming soon</span></a>
+                        </div>
+                    </div>
+                    <div class="cta-phone"><img src="/images/iPhone 13 Pro.png" alt="The Sheda app on a phone" loading="lazy"></div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="about-links">
-            <div class="logo-info">
-                <div class="logo">
-                    <img src="/images/shedddddddddd-1.png" alt="Logo">
-                    <span>SHEDA SOLUTIONS</span>
-                </div>
-
-                <div class="info">
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a class="brand" href="/"><img src="/images/shedddddddddd-1.png" alt="" width="34" height="34"><span>Sheda Solutions</span></a>
                     <p>Making real estate operations affable, affordable, available, and secure through blockchain.</p>
+                    <div class="socials">
+                        <a href="https://x.com/Shedasolutions" target="_blank" rel="noopener" aria-label="Sheda on X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a>
+                        <a href="https://t.me/shedasolutions" target="_blank" rel="noopener" aria-label="Sheda on Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 4.2 18.4 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.2-8.3c.4-.4-.1-.6-.6-.2L5.8 13.1l-4.9-1.5c-1.1-.3-1.1-1.1.2-1.6L20.2 2.7c.9-.3 1.7.2 1.4 1.5z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/sinas-sheda-solutions/" target="_blank" rel="noopener" aria-label="Sheda on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.66 4.8 6.13V21h-4v-4.9c0-1.17-.02-2.68-1.63-2.68-1.64 0-1.89 1.28-1.89 2.6V21h-4z"/></svg></a>
+                        <a href="https://www.instagram.com/shedasolutions" target="_blank" rel="noopener" aria-label="Sheda on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="https://market.sheda.app">Marketplace</a></li>
+                        <li><a href="/#collections">Sheda Collections</a></li>
+                        <li><a href="/#how-it-works">How it works</a></li>
+                        <li><a href="/#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About us</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="https://sheda-solutions.gitbook.io/sheda-solutions" target="_blank" rel="noopener">Docs</a></li>
+                        <li><a href="/docs/sheda%20solution%20brochure%202025.pdf" target="_blank" rel="noopener">Brochure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="/#faq">FAQs</a></li>
+                        <li><a href="/contact.html">Support</a></li>
+                        <li><a href="https://t.me/+0freci5Se-pkMGVk" target="_blank" rel="noopener">Community</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="links">
-                <ul>
-                    <li>Company</li>
-                    <li><a href="/about.html">About us</a></li>
-                    <li>Blog</li>
-                    <li><a href="/contact.html">Contact</a></li>
-                    <li>Careers</li>
-                </ul>
-                <ul>
-                    <li>Legal</li>
-                    <li>Privacy</li>
-                    <li>Cookies</li>
-                    <li>Licenses</li>
-                </ul>
-                <ul>
-                    <li>Help</li>
-                    <li>Terms of use</li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="/contact.html">Support</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="foot-text">
-            <p>&copy; 2026 Sheda solutions. All rights reserved.</p>
-            <div class="social">
-                <a href="https://x.com/Shedasolutions?t=GwvhBBy10djOIGnr7N8xoQ&s=09" target="_blank"><img
-                        src="/images/twitter.png" alt="X logo"></a>
-                <a href="https://t.me/shedasolutions" target="_blank"><img src="/images/telegram.png"
-                        alt="telegram"></a>
-                <a href="https://www.linkedin.com/company/sinas-sheda-solutions/" target="_blank"><img
-                        src="/images/linkedin.png" alt="linkedIn"></a>
-                <a href="https://www.instagram.com/shedasolutions?igsh=MW8xY2gweWdkMDNsMw==" target="_blank"><img
-                        src="/images/facebook.png" alt="facebook"></a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sheda Solutions. All rights reserved.</p>
+                <p>Built on NEAR</p>
             </div>
         </div>
     </footer>
-
-    <script src="/js/main.js"></script>
-    <script src="/js/formSubmisson.js"></script>
-
+    <script src="/js/site.js"></script>
 </body>
-
 </html>

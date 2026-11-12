@@ -25,8 +25,8 @@ To view the landing page locally:
 ## Project Structure
 
 * `index.html`: The main HTML file for the landing page.
-* `css/conmmonstyle.css`: The primary stylesheet for the landing page.
-* `js/main.js`:  JavaScript file for interactive elements.
+* `css/site.css`: The one stylesheet every page uses (header, footer, sections, buttons).
+* `js/site.js`: The one script every page uses (menu, tabs, scroll effects, contact form). Add `?static` to a URL to turn off the fade-in, for screenshots.
 * `image/`:  Folder containing images used on the landing page.
 
 
