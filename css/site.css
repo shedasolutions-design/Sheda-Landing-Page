@@ -236,7 +236,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .example-panel { max-width: 480px; margin-left: auto; width: 100%; padding: 40px; border-radius: 35px; background: rgba(193, 39, 45, .05); }
 .example-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 50px rgba(18, 18, 22, .10); }
 .example-photo { position: relative; aspect-ratio: 12 / 7; }
-.example-photo img { width: 100%; height: 100%; object-fit: cover; }
+.example-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
 .example-tag { position: absolute; left: 14px; top: 14px; padding: 5px 12px; border-radius: 999px; background: rgba(255, 255, 255, .92); font-size: 12px; font-weight: 600; color: var(--ink); }
 .example-body { padding: 22px 26px 26px; }
 .example-body h3 { font-family: var(--font-body); font-weight: 500; font-size: 20px; letter-spacing: 0; }
@@ -254,8 +254,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .example-facts div { display: flex; justify-content: space-between; gap: 12px; }
 .example-facts dt { color: var(--ink); }
 .example-facts dd { margin: 0; color: var(--ink); font-weight: 700; }
-.photo-credit { margin-top: 12px; text-align: center; font-size: 11.5px; color: #9a9aa4; }
-.photo-credit a { text-decoration: underline; }
 
 /* ---------- Pillars ---------- */
 .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
