@@ -1,25 +1,40 @@
-# Introduction
+---
+description: Why real estate needs a trustless market, and where the demand is.
+---
 
-The real estate sector remains plagued by intermediaries, opaque processes, excessive paperwork, and rampant fraud, driving up costs and creating severe liquidity and trust barriers.
+# The problem and the opportunity
 
-Nowhere is this more evident than in Africa's student and urban housing markets, where explosive demand collides with chronic undersupply.
+## Real estate runs on blind trust
 
-In Nigeria alone, over 500,000 new students enter tertiary institutions annually, joining a national undergraduate population exceeding 1.8 million. Across Africa, tertiary enrollment surpasses 12 million, and globally it exceeds 220 million (UNESCO, 2023). Roughly two-thirds of these students relocate for their studies, yet only 10–30% secure on-campus accommodation in Nigeria, leaving millions dependent on an off-campus market riddled with scams, inflated rents, and unsafe properties.
+The real estate sector remains defined by intermediaries, opaque processes, excessive paperwork and fraud. Each of these adds cost, and together they create severe liquidity and trust barriers.
 
-Sheda Solutions is a decentralised real estate operations market built to solve these exact problems through on-chain ownership, control, and utility of real estate assets. Every property listed is recorded on the blockchain as its owner's, every payment waits in escrow, and every rental income stream and governance right in Sheda Collections is held by the people who own it, without intermediaries.
+| Problem                         | What it looks like today                                                                                     | What Sheda Solutions changes                                                                               |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| **Stacked agent fees**          | Renters and buyers pay one or more agents on top of the price, often for little more than an introduction.  | Buyers deal directly with owners and pay the listed price; the seller pays a 2% fee only on completion.    |
+| **Fake listings, double sales** | Ownership is hard to verify, so homes are listed by non-owners or "sold" to more than one person.           | Each listing is a property record on the blockchain under its owner's account; it can't be sold twice.    |
+| **Vanishing deposits**          | Inspection fees, reservation fees and damage deposits are paid in cash and often never returned.            | All money waits in escrow under fixed rules; damage deposits are returned automatically if not claimed.   |
+| **Paper agreements**            | Agreements live in drawers and are hard to prove or recover.                                                | Agreements and documents are kept with the deal, and each file's fingerprint is recorded on the blockchain. |
+| **Closed investment**           | Property needs a large lump sum; small investors who join pools get no say and no visibility.               | Shares in a specific flat from a small amount, with votes, phase approvals and on-chain rent.             |
+| **Misplaced supply**            | Builders guess where homes are wanted; demand has no way to signal itself.                                  | One shared record of listings, deals and rents shows where demand is.                                     |
 
-With Sheda Solutions, users get:
+## Where the demand is: student and urban housing
 
-* On-chain ownership records for every listed property, so a home can't quietly be sold twice
-* Smart-contract automated P2P real estate marketplace, with every payment held in escrow
-* Direct rental income distribution, with each flat's rent landing in its own vault and complete visibility into property performance
-* Liquidity through the share market, where owners sell and buy shares between themselves
-* Frictionless fractional ownership through Sheda Collections
-* Smart-contract automated leasing, payments, refundable damage deposits and phase-by-phase building payments
-* Zero dependency on traditional brokers or opaque off-chain processes
+Nowhere is the gap between demand and supply clearer than in Africa's student and urban housing markets.
 
-By combining on-chain records with end-to-end on-chain operations, Sheda Solutions reduces fraud, slashes transaction costs, unlocks liquidity, and opens real estate investment to everyone, starting with the student and urban housing crisis in Africa and expanding globally.
+* In Nigeria alone, over **500,000** new students enter tertiary institutions every year, joining a national undergraduate population exceeding **1.8 million**.
+* Across Africa, tertiary enrolment surpasses **12 million**, and globally it exceeds **220 million** (UNESCO, 2023).
+* Roughly **two-thirds** of students relocate for their studies, yet only **10–30%** secure on-campus accommodation in Nigeria.
 
-We are not wrapping old real estate in new tokens; we are rebuilding real estate operations from the ground up on blockchain, giving every investor, tenant, and developer direct, transparent control over their assets.
+That leaves millions of students dependent on an off-campus market riddled with scams, inflated rents and unsafe rooms, while new homes are rarely built near the campuses that need them. The same pattern repeats in fast-growing cities, where workers compete for a small supply of rentals. Nigeria's overall housing shortage is estimated at around **15 million homes**.
 
-A core strength of blockchain lies in its provision of immutable, transparent transaction records. By deploying smart contracts, Sheda Solutions ensures all deals adhere to predefined rules, significantly mitigating fraud risks. Furthermore, the platform uses digital dollar payments (USDC and USDT) with prices shown in 24 currencies, including naira, offering users a convenient, secure method for purchasing, renting, and managing properties. Through these innovations, Sheda Solutions not only streamlines real estate transactions but also bridges the critical gap in the housing crisis, creating a safer, more efficient marketplace for all participants.
+## The opportunity
+
+The money and the demand already exist. What's missing is:
+
+1. **A safe way to deal directly**, so renters, buyers and owners don't need to trust strangers or middlemen.
+2. **A way to fund new supply collectively**, so many small investors can finance homes where they're needed, with real control over how their money is spent.
+3. **A shared record of demand**, so builders can see where homes are wanted before they build.
+
+Sheda Solutions is built to provide all three: a decentralised market for real estate operations, where escrow replaces blind trust, Sheda Collections funds new supply, and the market's own record points that supply at demand, starting with student housing and growing into urban markets.
+
+We are not wrapping old real estate in new tokens. We are rebuilding how real estate operates, so every renter, buyer, investor, manager and builder has direct, transparent control over their part of it.

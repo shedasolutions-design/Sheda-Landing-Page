@@ -1,6 +1,10 @@
 # Conclusion
 
-Sheda Solutions stands as a beacon for the future of real estate, offering a decentralised market where transparency, security, and community investment are at the forefront. By leveraging the capabilities of smart contracts on NEAR, we're not just creating a tool for buying and selling but a community where everyone can participate in real estate opportunities, ensuring that the benefits of blockchain are accessible to all in solving worldwide housing deficiencies.
+Real estate is the largest asset class in the world, and for most people it is still the hardest to deal in safely. Sheda Solutions changes that by moving the parts that require trust (custody of money, proof of ownership, the rules of a deal) into smart contracts on NEAR, and leaving the people in the market free to deal directly.
+
+Renters and buyers pay into escrow and keep control until they accept. Sellers meet buyers whose money is already committed. Investors own real shares in real homes, choose who runs them and claim their rent directly. Builders raise where the demand is and are paid as they deliver. Managers build a public record that wins them the next building. Every one of them works on the same open record.
+
+That is how a decentralised market for real estate operations helps solve housing shortages, starting with students and growing cities in Africa, and expanding from there.
 
 <figure><img src=".gitbook/assets/1654820163623.jpg" alt="" width="375"><figcaption><p><mark style="color:red;"><strong>LET SHEDA IT WITH EASE</strong></mark></p></figcaption></figure>
 

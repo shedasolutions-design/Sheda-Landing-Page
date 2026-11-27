@@ -3,3 +3,12 @@ root: ./gitbook/
 structure:
   readme: README.md
   summary: SUMMARY.md
+
+# The 2025 docs lived under /basics/...; keep those links working.
+redirects:
+  basics/editor: basics/editor.md
+  basics/markdown: basics/markdown.md
+  basics/images-and-media: basics/images-and-media.md
+  basics/interactive-blocks: basics/interactive-blocks.md
+  basics/openapi: basics/openapi.md
+  basics/integrations: basics/integrations.md
