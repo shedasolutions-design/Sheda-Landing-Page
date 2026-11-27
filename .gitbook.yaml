@@ -3,3 +3,15 @@ root: ./gitbook/
 structure:
   readme: README.md
   summary: SUMMARY.md
+
+# Old page addresses from the 2025 docs, sent to the pages that replace them.
+redirects:
+  basics/editor: README.md
+  basics/markdown: litepaper/the-problem.md
+  basics/images-and-media: litepaper/a-decentralised-market.md
+  basics/interactive-blocks: litepaper/technology.md
+  basics/openapi: litepaper/trust-and-safety.md
+  basics/integrations: litepaper/the-marketplace.md
+  our-roadmap: litepaper/roadmap.md
+  revenue-model-and-financial-projections: litepaper/business-model.md
+  conclusion: more/contact.md
