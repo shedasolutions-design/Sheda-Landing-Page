@@ -416,6 +416,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .js .reveal.shown { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
+/* Who it's for: six roles in three columns */
+.pillars.roles { grid-template-columns: repeat(3, 1fr); }
+.pillars.roles .pillar h3 { margin-top: 0; }
+/* Six milestones: three a row, no connecting line */
+.roadmap.roadmap-six { grid-template-columns: repeat(3, 1fr); gap: 28px 20px; }
+.roadmap.roadmap-six::before { display: none; }
+@media (max-width: 1080px) {
+  .pillars.roles, .roadmap.roadmap-six { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .pillars.roles, .roadmap.roadmap-six { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 1080px) {
   .feature-strip ul { grid-template-columns: repeat(2, 1fr); }
   .pillars { grid-template-columns: repeat(2, 1fr); }
