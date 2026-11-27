@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sheda diagrams</title>
+<style>
+@font-face { font-family: "Inter"; src: url("../../../font/Inter/Inter-VariableFont_slnt,wght.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Manrope"; src: url("../../../font/Manrope/Manrope-VariableFont_wght.ttf") format("truetype"); font-weight: 200 800; }
+:root { --red:#c1272d; --red-dark:#a11f25; --tint:#fdf0f0; --soft:#f8dcdd; --ink:#121216; --text:#3a3a44; --muted:#6b6b78; --line:#e4e4ea; --bg:#faf8f8; --green:#12804c; }
+* { box-sizing: border-box; }
+html, body { margin:0; background:#fff; font-family:"Inter",sans-serif; color:var(--text); }
+.d { display:none; width:1200px; padding:48px 56px; background:#fff; }
+h1 { font-family:"Manrope",sans-serif; color:var(--ink); font-size:30px; letter-spacing:-.02em; margin:0 0 6px; }
+.sub { color:var(--muted); font-size:15px; margin:0 0 28px; }
+.brand { display:flex; align-items:center; gap:8px; font-family:"Manrope"; font-weight:800; color:var(--ink); font-size:14px; margin-top:26px; }
+.brand img { width:20px; height:20px; }
+.eyebrow { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--red); margin-bottom:10px; }
+.icon { width:28px; height:28px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+
+/* ---- flow ---- */
+.top { display:grid; grid-template-columns: 1fr 120px 1.2fr 120px 1fr; align-items:center; }
+.actor { border:1.5px solid var(--line); border-radius:16px; padding:18px; text-align:center; background:#fff; }
+.actor .icon { width:38px; height:38px; color:var(--ink); }
+.actor b { display:block; font-family:"Manrope"; color:var(--ink); font-size:17px; margin-top:6px; }
+.actor span { font-size:13px; color:var(--muted); }
+.app { background:var(--ink); color:#fff; border-radius:16px; padding:18px; text-align:center; }
+.app .icon { color:#fff; width:38px; height:38px; }
+.app b { display:block; font-family:"Manrope"; font-size:17px; margin-top:6px; }
+.app span { font-size:13px; color:#c9c9d2; }
+.arrow { position:relative; height:2px; background:var(--red); margin:0 14px; }
+.arrow.r::after, .arrow.l::before { content:""; position:absolute; top:-5px; border:6px solid transparent; }
+.arrow.r::after { right:-2px; border-left:9px solid var(--red); border-right:0; }
+.arrow.l::before { left:-2px; border-right:9px solid var(--red); border-left:0; }
+.down { width:2px; height:34px; background:var(--red); margin:0 auto; position:relative; }
+.down::after { content:""; position:absolute; bottom:-2px; left:-5px; border:6px solid transparent; border-top:9px solid var(--red); border-bottom:0; }
+.escrow { margin:0 auto; width:560px; background:var(--tint); border:1.5px solid var(--soft); border-radius:16px; padding:16px 20px; display:flex; gap:16px; align-items:center; }
+.escrow .icon { color:var(--red); width:40px; height:40px; flex:none; }
+.escrow b { font-family:"Manrope"; color:var(--ink); font-size:17px; display:block; }
+.escrow span { font-size:13.5px; }
+.steps { display:grid; grid-template-columns: repeat(6, 1fr); gap:10px; margin-top:6px; }
+.step { background:var(--bg); border:1.5px solid var(--line); border-radius:14px; padding:14px 12px; position:relative; }
+.step .n { width:28px; height:28px; border-radius:50%; background:var(--red); color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; margin-bottom:8px; }
+.step b { font-family:"Manrope"; color:var(--ink); font-size:14.5px; display:block; margin-bottom:3px; }
+.step span { font-size:12.5px; line-height:1.4; display:block; }
+.step.last { background:var(--ink); border-color:var(--ink); }
+.step.last b { color:#fff; } .step.last span { color:#c9c9d2; }
+.step.last .n { background:var(--green); }
+.refund { margin-top:14px; font-size:13px; color:var(--muted); display:flex; gap:22px; }
+.refund i { font-style:normal; color:var(--green); font-weight:700; }
+
+/* ---- architecture ---- */
+.layer { border-radius:18px; padding:18px 20px; margin-bottom:12px; }
+.layer h3 { font-family:"Manrope"; color:var(--ink); font-size:15px; margin:0 0 12px; letter-spacing:.02em; display:flex; justify-content:space-between; }
+.layer h3 small { font-family:"Inter"; color:var(--muted); font-weight:500; font-size:13px; }
+.chips { display:grid; gap:10px; }
+.chip { background:#fff; border:1.5px solid var(--line); border-radius:12px; padding:11px 12px; font-size:12.5px; line-height:1.4; }
+.chip b { display:block; font-family:"Manrope"; color:var(--ink); font-size:14px; margin-bottom:2px; }
+.l-people { background:var(--bg); border:1.5px solid var(--line); }
+.l-app { background:#fff; border:1.5px solid var(--ink); }
+.l-app .chip.dark { background:var(--ink); border-color:var(--ink); color:#c9c9d2; }
+.l-app .chip.dark b { color:#fff; }
+.l-chain { background:var(--tint); border:1.5px solid var(--soft); }
+.l-chain .chip { border-color:var(--soft); }
+.l-chain .chip.council { background:var(--red); border-color:var(--red); color:#fde6e7; }
+.l-chain .chip.council b { color:#fff; }
+.conn { display:flex; justify-content:center; gap:180px; margin:-4px 0 8px; font-size:12px; color:var(--red); font-weight:700; }
+.conn div { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.conn .bar { width:2px; height:18px; background:var(--red); }
+.legend { display:flex; gap:20px; font-size:12.5px; color:var(--muted); margin-top:6px; }
+
+/* ---- cycle ---- */
+.cycle { display:grid; grid-template-columns: repeat(5, 1fr); gap:14px; align-items:stretch; position:relative; }
+.stage { background:#fff; border:1.5px solid var(--line); border-radius:16px; padding:18px 16px; position:relative; }
+.stage .icon { color:var(--red); width:34px; height:34px; }
+.stage .k { font-size:12px; font-weight:700; color:var(--red); letter-spacing:.1em; margin-top:8px; }
+.stage b { display:block; font-family:"Manrope"; color:var(--ink); font-size:18px; margin:2px 0 6px; }
+.stage span { font-size:13px; line-height:1.45; display:block; }
+.stage .who { margin-top:10px; font-size:11.5px; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+.stage:not(:last-child)::after { content:""; position:absolute; right:-14px; top:50%; border:7px solid transparent; border-left:10px solid var(--red); transform:translateY(-50%); }
+.loop { margin-top:16px; border:1.5px dashed var(--red); border-top:none; border-radius:0 0 18px 18px; height:34px; position:relative; }
+.loop span { position:absolute; left:50%; bottom:-11px; transform:translateX(-50%); background:#fff; padding:0 12px; font-size:13px; color:var(--red-dark); font-weight:700; }
+.controls { display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; margin-top:30px; }
+.controls div { background:var(--ink); color:#c9c9d2; border-radius:14px; padding:13px 14px; font-size:12.5px; line-height:1.4; }
+.controls b { color:#fff; display:block; font-family:"Manrope"; font-size:14px; margin-bottom:2px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M9 15v2c0 1.7 2.7 3 6 3s6-1.3 6-3v-5c0-1.7-2.7-3-6-3"/></symbol>
+  <symbol id="i-hammer" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/><path d="M12 4v3"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h10M7 17h6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2.5"/><path d="M3 10h18"/><circle cx="16.5" cy="15" r="1.3"/><path d="M6 6l9-3 2 3"/></symbol>
+</svg>
+
+<!-- 1. P2P transaction flow -->
+<section class="d" id="flow">
+  <p class="eyebrow">P2P transaction flow</p>
+  <h1>Buying or renting on Sheda Solutions</h1>
+  <p class="sub">Buyer and seller deal directly. The money waits in a smart contract on NEAR until the deal is done.</p>
+  <div class="top">
+    <div class="actor"><svg class="icon"><use href="#i-user"/></svg><b>Seller profile</b><span>Owner, landlord or manager</span></div>
+    <div class="arrow r"></div>
+    <div class="app"><svg class="icon"><use href="#i-phone"/></svg><b>Sheda Solutions app</b><span>Listing recorded on the blockchain as the seller's</span></div>
+    <div class="arrow l"></div>
+    <div class="actor"><svg class="icon"><use href="#i-user"/></svg><b>Buyer profile</b><span>Buyer or renter</span></div>
+  </div>
+  <div class="down" style="margin-top:14px"></div>
+  <div class="escrow" style="margin-top:12px"><svg class="icon"><use href="#i-lock"/></svg><div><b>Smart contract escrow on NEAR</b><span>Neither the seller, the buyer nor Sheda Solutions can take the money early.</span></div></div>
+  <div class="down" style="margin-top:12px; margin-bottom:12px"></div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><b>Buyer pays into escrow</b><span>Buy now, Rent now or Make an offer</span></div>
+    <div class="step"><div class="n">2</div><b>Seller accepts</b><span>Other offers are refunded automatically</span></div>
+    <div class="step"><div class="n">3</div><b>Book appointment</b><span>Seller approves the time or suggests another</span></div>
+    <div class="step"><div class="n">4</div><b>Agreement</b><span>Seller sends it; buyer accepts or asks for changes</span></div>
+    <div class="step"><div class="n">5</div><b>24-hour hold</b><span>Either side can raise a dispute</span></div>
+    <div class="step last"><div class="n">✓</div><b>Payment released</b><span>Sale or lease recorded on the blockchain</span></div>
+  </div>
+  <div class="refund"><span><i>Full refund</i> if the seller rejects, the offer expires after 7 days, or the buyer rejects the agreement</span><span><i>2% fee</i> only on a completed deal</span></div>
+  <div class="brand"><img src="../../../images/shedddddddddd-1.png" alt="">Sheda Solutions</div>
+</section>
+
+<!-- 2. Architecture -->
+<section class="d" id="arch">
+  <p class="eyebrow">Technical architecture</p>
+  <h1>How Sheda Solutions is built</h1>
+  <p class="sub">The money and the records live in smart contracts on NEAR. The app and services make them easy to use.</p>
+
+  <div class="layer l-people">
+    <h3>PARTICIPANTS <small>each acting independently</small></h3>
+    <div class="chips" style="grid-template-columns:repeat(5,1fr)">
+      <div class="chip"><b>Builders</b>Open raises, post stake</div>
+      <div class="chip"><b>Investors</b>Own shares, vote, claim rent</div>
+      <div class="chip"><b>Property managers</b>Inspect phases, let flats</div>
+      <div class="chip"><b>Landlords and sellers</b>List, approve appointments</div>
+      <div class="chip"><b>Buyers and renters</b>Pay into escrow, inspect</div>
+    </div>
+  </div>
+  <div class="conn"><div><div class="bar"></div></div><div><div class="bar"></div></div><div><div class="bar"></div></div></div>
+
+  <div class="layer l-app">
+    <h3>SHEDA SOLUTIONS APP AND SERVICES <small>web today · Android and iOS at mainnet</small></h3>
+    <div class="chips" style="grid-template-columns:1.3fr 1fr 1fr 1fr">
+      <div class="chip dark"><b>Built-in wallet</b>Created at sign-up, kept on the user's device, Google or 12-word backup</div>
+      <div class="chip"><b>Listings and search</b>Prices in 24 currencies</div>
+      <div class="chip"><b>Chat, appointments and notifications</b>One chat per property</div>
+      <div class="chip"><b>Gasless relayer</b>Sheda pays the network fees</div>
+    </div>
+    <div class="chips" style="grid-template-columns:1fr 1fr 1fr; margin-top:10px">
+      <div class="chip"><b>Document storage</b>Each file's fingerprint recorded on chain</div>
+      <div class="chip"><b>Accounts and security</b>Emailed codes, identity checks with official ID</div>
+      <div class="chip"><b>Ranks and records</b>Worked out from on-chain history, in the open</div>
+    </div>
+  </div>
+  <div class="conn"><div><div class="bar"></div>signed by the user's wallet</div><div><div class="bar"></div>USDC · USDT</div><div><div class="bar"></div>public reads</div></div>
+
+  <div class="layer l-chain">
+    <h3>NEAR BLOCKCHAIN · SMART CONTRACTS <small>money and records</small></h3>
+    <div class="chips" style="grid-template-columns:repeat(5,1fr)">
+      <div class="chip"><b>Marketplace</b>Property records, offers, escrow, agreements, leases, damage deposits, disputes</div>
+      <div class="chip"><b>Raise</b>Sheda Collections rounds, shares, manager votes, phase payments, objections</div>
+      <div class="chip"><b>Flat vaults</b>One per flat, opened when a raise fills; collect rent, pay owners</div>
+      <div class="chip"><b>Stake registry</b>Builders' stake and the cover set aside for each raise</div>
+      <div class="chip"><b>Share market</b>Owners sell and buy shares between themselves</div>
+    </div>
+    <div class="chips" style="grid-template-columns:1fr; margin-top:10px">
+      <div class="chip council"><b>Council · multi-signature</b>Several members must sign to settle disputes or change a contract. No single key controls the money.</div>
+    </div>
+  </div>
+  <div class="legend"><span>Planned: chain abstraction and chain signatures, so payments can come from other blockchains.</span></div>
+  <div class="brand"><img src="../../../images/shedddddddddd-1.png" alt="">Sheda Solutions</div>
+</section>
+
+<!-- 3. Collections cycle -->
+<section class="d" id="cycle">
+  <p class="eyebrow">Sheda Collections · fractional ownership</p>
+  <h1>From a raise to rent in the owners' hands</h1>
+  <p class="sub">Each step happens in the open, so money flows to where the demand is.</p>
+  <div class="cycle">
+    <div class="stage"><svg class="icon"><use href="#i-coins"/></svg><div class="k">1 · RAISE</div><b>Investors fund a flat</b><span>Shares in one specific flat. Money waits in the raise contract; full refund if the round doesn't fill.</span><div class="who">Builder · investors</div></div>
+    <div class="stage"><svg class="icon"><use href="#i-hammer"/></svg><div class="k">2 · BUILD</div><b>Paid phase by phase</b><span>The manager inspects each phase; owners have 7 days to object before the builder is paid.</span><div class="who">Builder · manager</div></div>
+    <div class="stage"><svg class="icon"><use href="#i-list"/></svg><div class="k">3 · LIST</div><b>Handed to the manager</b><span>The manager the owners voted for lists the finished flats on the marketplace.</span><div class="who">Manager</div></div>
+    <div class="stage"><svg class="icon"><use href="#i-key"/></svg><div class="k">4 · RENT</div><b>Let through escrow</b><span>Renters pay through escrow, with a refundable damage deposit, like any other listing.</span><div class="who">Renters</div></div>
+    <div class="stage"><svg class="icon"><use href="#i-wallet"/></svg><div class="k">5 · INCOME</div><b>Owners claim rent</b><span>Rent lands in the flat's vault. After the manager's fee, a 5% repair reserve and 2%, owners claim the rest.</span><div class="who">Investors</div></div>
+  </div>
+  <div class="loop"><span>Market insights show builders where homes are wanted next</span></div>
+  <div class="controls">
+    <div><b>Choose the manager</b>Owners vote; more than half a flat's shares can replace them</div>
+    <div><b>Stop a bad build</b>A quarter of the money objecting holds the payment</div>
+    <div><b>Builders have stake</b>Their own money stands behind each raise</div>
+    <div><b>Exit any time</b>Sell or buy shares on the share market</div>
+  </div>
+  <div class="brand"><img src="../../../images/shedddddddddd-1.png" alt="">Sheda Solutions</div>
+</section>
+
+<script>
+  var id = (location.hash || "#flow").slice(1);
+  document.getElementById(id).style.display = "block";
+</script>
+</body>
+</html>

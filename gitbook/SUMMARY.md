@@ -1,34 +1,12 @@
 # Table of contents
 
-* [Welcome to Sheda Solutions](README.md)
-
-## Litepaper
-
-* [The problem](litepaper/the-problem.md)
-* [A decentralised market](litepaper/a-decentralised-market.md)
-* [The marketplace](litepaper/the-marketplace.md)
-* [Sheda Collections](litepaper/sheda-collections.md)
-* [Trust and safety](litepaper/trust-and-safety.md)
-* [Technology](litepaper/technology.md)
-* [Business model](litepaper/business-model.md)
-* [Roadmap](litepaper/roadmap.md)
-* [Risks and how they're managed](litepaper/risks.md)
-
-## Guides
-
-* [Getting started](guides/getting-started.md)
-* [Buying and renting](guides/buying-and-renting.md)
-* [Selling and letting](guides/selling-and-letting.md)
-* [Investing in Sheda Collections](guides/investing.md)
-* [For builders](guides/builders.md)
-* [For property managers](guides/property-managers.md)
-* [Fees](guides/fees.md)
-* [Your wallet and security](guides/wallet-and-security.md)
-
-## More
-
-* [FAQ](more/faq.md)
-* [Glossary](more/glossary.md)
-* [Terms and privacy](more/terms-and-privacy.md)
-* [Brochure](more/brochure.md)
-* [Contact and community](more/contact.md)
+* [Welcome to sheda solutions lite paper](README.md)
+* [Executive summary](basics/editor.md)
+* [Introduction](basics/markdown.md)
+* [The vision of peer-to-peer real estate](basics/images-and-media.md)
+* [Technical implementation with blockchain](basics/interactive-blocks.md)
+* [Dispute resolution](basics/openapi.md)
+* [Detailed products features](basics/integrations.md)
+* [Our Roadmap](our-roadmap.md)
+* [Revenue model and financial projections](revenue-model-and-financial-projections.md)
+* [Conclusion](conclusion.md)
