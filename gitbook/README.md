@@ -1,10 +1,10 @@
 ---
 description: >-
-  The Sheda Solutions litepaper: a decentralised market for real estate
+  Sheda Solutions documentation: a decentralised market for real estate
   operations, built on NEAR.
 ---
 
-# Sheda Solutions Litepaper
+# Sheda Solutions Documentation
 
 <figure><img src=".gitbook/assets/i6t1po25.png" alt="Sheda Solutions"><figcaption><p>Revolutionizing real estate operations</p></figcaption></figure>
 
@@ -21,7 +21,7 @@ Sheda Solutions does not buy, sell, list or finance property. It provides the ra
 * **Affordable**: no agent commission on top of the price, no network fees, and property investment from a small amount.
 * **Secure**: every payment waits in escrow and every ownership record lives on the blockchain, where no one can quietly change it.
 
-### What this litepaper covers
+### What these docs cover
 
 | Section                                                                    | What you'll find                                                                 |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -36,5 +36,5 @@ Sheda Solutions does not buy, sell, list or finance property. It provides the ra
 | [Conclusion](conclusion.md)                                                | Where this goes, and how to reach us                                             |
 
 {% hint style="info" %}
-**Status.** Sheda Solutions is live in early access at [market.sheda.app](https://market.sheda.app). It runs on the NEAR test network, so every feature can be used without real money. Real payments start at mainnet launch, after an independent security audit of every contract. Figures in this paper (time windows, fees) are the mainnet values.
+**Status.** Sheda Solutions is live in early access at [market.sheda.app](https://market.sheda.app). It runs on the NEAR test network, so every feature can be used without real money. Real payments start at mainnet launch, after an independent security audit of every contract. Figures in these docs (time windows, fees) are the mainnet values.
 {% endhint %}

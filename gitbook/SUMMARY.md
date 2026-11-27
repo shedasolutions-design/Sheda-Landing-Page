@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Sheda Solutions Litepaper](README.md)
+* [Sheda Solutions Documentation](README.md)
 * [Executive summary](basics/editor.md)
 * [The problem and the opportunity](basics/markdown.md)
 * [A decentralised market](basics/images-and-media.md)
